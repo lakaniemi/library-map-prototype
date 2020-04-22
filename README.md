@@ -1,5 +1,7 @@
 # Library map prototype
 
+This is meant to be a quick, but still usable prototype made for Aalto University coursework. If you're here to see some good quality code, you're in the wrong place :)
+
 ## Requirements
 
 * Node (see `.nvmrc` for used version)
