@@ -5,6 +5,8 @@ export const Map = () => (
     xmlns="http://www.w3.org/2000/svg"
     fillRule="evenodd"
     clipRule="evenodd"
+    width="100vw"
+    height="100vh"
     viewBox="0 0 4096 2534"
   >
     <path id="bcg" fill="#fff" d="M0 0H4096V2534H0z"></path>
