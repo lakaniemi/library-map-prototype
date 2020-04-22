@@ -6,7 +6,11 @@ import { Map } from "./Map";
 
 export const App = () => {
   return (
-    <TransformWrapper>
+    <TransformWrapper
+      wheel={{
+        step: 70,
+      }}
+    >
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <>
           <div>Controls here</div>
