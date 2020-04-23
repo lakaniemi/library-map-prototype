@@ -1,0 +1,30 @@
+.top-right-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9001;
+}
+
+.menu-overlay {
+  position: absolute;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 90%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 1rem;
+}
+
+.highlight-button-container {
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.highlight-button {
+  display: block;
+  margin: 0.2rem;
+  padding: 0.4rem;
+}

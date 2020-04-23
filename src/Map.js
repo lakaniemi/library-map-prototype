@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { highlightIDs } from "./data";
+import { useWindowSize } from "./hooks";
 
-export const Map = () => {
+export const Map = ({ highlight }) => {
+  const windowSize = useWindowSize();
+
   // Hide all highlights when mounted
   useEffect(() => {
     highlightIDs.forEach((id) => {
@@ -14,13 +17,23 @@ export const Map = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const element = document.getElementById(highlight);
+
+    if (!element) {
+      console.log("Could not find highlight by id: " + highlight);
+    } else {
+      element.style.visibility = "visible";
+    }
+  }, [highlight]);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fillRule="evenodd"
       clipRule="evenodd"
-      width="100vw"
-      height="100vh"
+      width={`${windowSize.width}px`}
+      height={`${windowSize.height}px`}
       viewBox="0 0 4096 2534"
     >
       <path id="bcg" fill="#fff" d="M0 0H4096V2534H0z"></path>
