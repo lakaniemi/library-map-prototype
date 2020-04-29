@@ -1,31 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { highlightIDs } from "./data";
 import { useWindowSize } from "./hooks";
+
+// Regex find:    (id="([a-zA-Z]*)")
+//       replace: $0\nvisibility={getVisibility("$2")}
 
 export const Map = ({ highlight }) => {
   const windowSize = useWindowSize();
 
-  // Hide all highlights when mounted
-  useEffect(() => {
-    highlightIDs.forEach((id) => {
-      const element = document.getElementById(id);
-      if (!element) {
-        console.log("Could not find highlight by id: " + id);
-      } else {
-        element.style.visibility = "hidden";
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const element = document.getElementById(highlight);
-
-    if (!element) {
-      console.log("Could not find highlight by id: " + highlight);
-    } else {
-      element.style.visibility = "visible";
+  const getVisibility = (elementId) => {
+    if (!highlightIDs.includes(elementId)) {
+      console.log(
+        `ID not found in list of toggleable highlights, ignoring: ${elementId}`
+      );
+      return "visible";
     }
-  }, [highlight]);
+
+    return highlight === elementId ? "visible" : "hidden";
+  };
 
   return (
     <svg
@@ -37,7 +29,12 @@ export const Map = ({ highlight }) => {
       viewBox="0 0 4096 2534"
     >
       <g id="Layer1">
-        <path id="bcg" fill="#fff" d="M0 0H4096V2534H0z"></path>
+        <path
+          id="bcg"
+          visibility={getVisibility("bcg")}
+          fill="#fff"
+          d="M0 0H4096V2534H0z"
+        ></path>
       </g>
       <g opacity="0.4">
         <path
@@ -212,11 +209,13 @@ export const Map = ({ highlight }) => {
       </g>
       <path
         id="childrenHealthCare"
+        visibility={getVisibility("childrenHealthCare")}
         fill="#E6A4FF"
         d="M3460 716.09l.07 105 139-.09-.07-105-139 .09zm445 9.91h160v1148h-160V726zm-546 362h113v139h-113v-139zm234 0h-115v139h115v-139zm13 0h105v139h-105v-139zm-133 245h-113v139h113v-139zm6 0h115v139h-115v-139zm233 0h-105v139h105v-139zm14-245h112v139h-112v-139zm-265.93-145.91l-.07-105 139-.09.07 105-139 .09zm-.07 23l.07 105 139-.09-.07-105-139 .09z"
       ></path>
       <path
         id="yesBox"
+        visibility={getVisibility("yesBox")}
         fill="#24BD66"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -224,6 +223,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="info"
+        visibility={getVisibility("info")}
         fill="#2F80ED"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -231,6 +231,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="kidsLibraryInfo"
+        visibility={getVisibility("kidsLibraryInfo")}
         fill="#2F80ED"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -238,6 +239,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="kidsArea"
+        visibility={getVisibility("kidsArea")}
         fill="#24BD66"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -245,6 +247,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="studio"
+        visibility={getVisibility("studio")}
         fill="#FF7E7E"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -252,6 +255,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="musicRoom"
+        visibility={getVisibility("musicRoom")}
         fill="#FF7E7E"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -259,6 +263,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="stage"
+        visibility={getVisibility("stage")}
         fill="#FF7E7E"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -266,6 +271,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="paja"
+        visibility={getVisibility("paja")}
         fill="#FF7E7E"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -273,6 +279,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="ypp"
+        visibility={getVisibility("ypp")}
         fill="#FFB574"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -280,6 +287,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="meetingSpace"
+        visibility={getVisibility("meetingSpace")}
         fill="#FFB574"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -287,6 +295,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="kela"
+        visibility={getVisibility("kela")}
         fill="#FFB574"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -294,15 +303,22 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="healthCareCenter"
+        visibility={getVisibility("healthCareCenter")}
         fill="#E6A4FF"
         d="M458 581l-97.5-33.5-30 95H352V749h106V581zm109 38.5L462 581v168h105V619.5zM151 846h109v144H151V846zm0 154h109v144H151v-144zm141 228H157v112h135v-112zm-135 119h135v139H157v-139zm278 0H300v139h135v-139zm-135-119h135v112H300v-112zm75-382H266v144h109V846zm-109 154h109v144H266v-144zm224-154H381v144h109V846zm-109 154h109v144H381v-144zm224-154H496v144h109V846zm-109 154h109v144H496v-144zM198.612 750.756l-.23-106.1 150.368-.326.231 106.099-150.369.327z"
       ></path>
-      <g id="wc" fill="#BDBDBD" stroke="#4F4F4F" strokeWidth="3">
+      <g
+        id="wc"
+        visibility={getVisibility("wc")}
+        fill="#BDBDBD"
+        stroke="#4F4F4F"
+        strokeWidth="3"
+      >
         <path d="M3523.5 1875.5H3903.5V2021.5H3523.5z"></path>
         <path d="M720.5 1426.5H1000.5V1671.5H720.5z"></path>
         <path d="M1877.5 285.5H2192.5V408.5H1877.5z"></path>
       </g>
-      <g id="meetinRooms">
+      <g id="meetinRooms" visibility={getVisibility("meetinRooms")}>
         <path
           fill="#9AE0F6"
           stroke="#4F4F4F"
@@ -350,6 +366,7 @@ export const Map = ({ highlight }) => {
       </g>
       <path
         id="quietArea"
+        visibility={getVisibility("quietArea")}
         fill="#FED863"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -358,6 +375,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="VOX"
+        visibility={getVisibility("VOX")}
         fill="#24BD66"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -366,11 +384,13 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="elevators"
+        visibility={getVisibility("elevators")}
         fill="#CB731C"
         d="M1883 499h60v85h-60v-85zm1675 0h-60v85h60v-85zm73 0h-60v85h60v-85zm13 0h60v85h-60v-85zm133 0h-60v85h60v-85zm-1761 0h-60v85h60v-85zm13 0h60v85h-60v-85zm133 0h-60v85h60v-85z"
       ></path>
       <path
         id="outline"
+        visibility={getVisibility("outline")}
         fill="none"
         fillRule="nonzero"
         stroke="#000"
@@ -379,6 +399,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="rtg"
+        visibility={getVisibility("rtg")}
         fill="#E6A4FF"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -387,6 +408,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="dentalClinic"
+        visibility={getVisibility("dentalClinic")}
         fill="#E6A4FF"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -395,6 +417,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="mentalHealthCenter"
+        visibility={getVisibility("mentalHealthCenter")}
         fill="#E6A4FF"
         d="M1062.76 1958.29l169-17.17 8.98 88.44-169 17.17-8.98-88.44zm9.24 97.87l168.99-17.16 8.99 88.44-169 17.16-8.98-88.44zm181.99 81.84L1085 2155.16l8.98 88.44 169-17.16-8.99-88.44zM1096 2249.5l167-17 10.5 105.5h-166l-11.5-88.5zm175 93h-151.5v117l166.5 3.5-15-120.5z"
       ></path>
@@ -406,6 +429,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="childrenBooks"
+        visibility={getVisibility("childrenBooks")}
         fill="#2D9CDB"
         stroke="#4F4F4F"
         strokeWidth="3"
@@ -413,6 +437,7 @@ export const Map = ({ highlight }) => {
       ></path>
       <path
         id="music"
+        visibility={getVisibility("music")}
         fill="#2D9CDB"
         stroke="#4F4F4F"
         strokeWidth="3"
