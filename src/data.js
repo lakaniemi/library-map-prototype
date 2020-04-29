@@ -1,6 +1,6 @@
-// JSON.stringify(Array.from(document.querySelectorAll("path")).map(k => k.id).filter(Boolean))
+// JSON.stringify(Array.from(document.querySelectorAll("path,g")).map(k => k.id).filter(Boolean))
 export const highlightIDs = [
-  // Background, ignore:
+  // "Layer1",
   // "bcg",
   "childrenHealthCare",
   "yesBox",
@@ -15,10 +15,11 @@ export const highlightIDs = [
   "meetingSpace",
   "kela",
   "healthCareCenter",
+  "wc",
+  "meetinRooms",
   "quietArea",
   "VOX",
   "elevators",
-  // Outline for the map, ignore:
   // "outline",
   "rtg",
   "dentalClinic",

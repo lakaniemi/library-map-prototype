@@ -10,9 +10,10 @@ export const Map = ({ highlight }) => {
 
   const getVisibility = (elementId) => {
     if (!highlightIDs.includes(elementId)) {
-      console.log(
-        `ID not found in list of toggleable highlights, ignoring: ${elementId}`
-      );
+      // To debug:
+      // console.log(
+      //   `ID not found in list of toggleable highlights, ignoring: ${elementId}`
+      // );
       return "visible";
     }
 
