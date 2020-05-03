@@ -1,0 +1,35 @@
+.menu-buttons-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+}
+
+.icon-button {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0px 0px 0.5rem 1px rgba(0, 0, 0, 0.75);
+}
+
+.info {
+  background-color: #00bfff;
+}
+
+.qr {
+  background-color: #228b22;
+}
+
+.icon-button:focus {
+  outline: 0;
+  box-shadow: 0 0 1rem rgba(50, 50, 200, 0.75);
+}
+
+.icon-button img {
+  width: 80%;
+  height: 80%;
+}

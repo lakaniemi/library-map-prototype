@@ -1,10 +1,3 @@
-.top-right-menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 9001;
-}
-
 .menu-overlay {
   position: absolute;
   z-index: 9000;
