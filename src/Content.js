@@ -22,7 +22,10 @@ export const Content = ({ resetTransform }) => {
     <>
       <MenuButtons openNavigation={() => setNavigationVisible(true)} />
       {navigationVisible && (
-        <NavigationMenu onHighlightClick={onHighlightClick} />
+        <NavigationMenu
+          onHighlightClick={onHighlightClick}
+          onClose={() => setNavigationVisible(false)}
+        />
       )}
       <TransformComponent>
         <Map highlight={highlight} />

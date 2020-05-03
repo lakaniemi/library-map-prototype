@@ -9,7 +9,7 @@ export const MenuButtons = ({ openNavigation }) => {
   return (
     <>
       <div className="menu-buttons-container">
-        <button className="icon-button qr" onClick={openNavigation}>
+        <button className="icon-button qr" onClick={() => {}}>
           <img src={QRButton} alt="view qr code" />
         </button>
 
