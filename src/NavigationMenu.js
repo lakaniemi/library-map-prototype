@@ -20,7 +20,7 @@ const CATEGORIES = {
     meeting_myrsky: "Myrsky",
     meeting_b31: "B31",
   },
-  Uncaregorized: {
+  Other: {
     wc: "wc",
     quietArea: "quietArea",
     servicePoint: "servicePoint",
