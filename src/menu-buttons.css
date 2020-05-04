@@ -17,11 +17,20 @@
 }
 
 .info {
-  background-color: #00bfff;
+  /* background-color: #00bfff; */
+  background-color: #00aeff;
+}
+
+.info:hover {
+  background-color: #00b7ff;
 }
 
 .qr {
   background-color: #228b22;
+}
+
+.qr:hover {
+  background-color: #229622;
 }
 
 .icon-button:focus {
