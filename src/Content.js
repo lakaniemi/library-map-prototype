@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TransformComponent } from "react-zoom-pan-pinch";
+import { useLocation } from "react-router-dom";
 
 import { MenuButtons } from "./MenuButtons";
 import { NavigationMenu } from "./NavigationMenu";
@@ -10,6 +11,17 @@ export const Content = ({ resetTransform }) => {
   const [highlight, setHighlight] = useState(null);
   const [navigationVisible, setNavigationVisible] = useState(false);
   const [qrCodeVisible, setQRCodeVisible] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const highlightValue = new URLSearchParams(location.search).get(
+      "highlight"
+    );
+    if (highlightValue) {
+      setHighlight(highlightValue);
+    }
+  }, [location.search]);
 
   const onHighlightClick = (id) => () => {
     setNavigationVisible(false);
@@ -32,7 +44,7 @@ export const Content = ({ resetTransform }) => {
           onClose={() => setNavigationVisible(false)}
         />
       )}
-      {qrCodeVisible && <QRCodeBox />}
+      {qrCodeVisible && <QRCodeBox highlight={highlight} />}
       <TransformComponent>
         <Map highlight={highlight} />
       </TransformComponent>
