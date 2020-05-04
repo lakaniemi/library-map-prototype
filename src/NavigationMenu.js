@@ -2,15 +2,45 @@ import React from "react";
 
 import "./navigation-menu.css";
 import CloseButton from "./icons/close-24px.svg";
-import { highlightIDs } from "./data";
 
-// "meeting_kari",
-// "meeting_b31",
-// "meeting_aalto",
-// "meeting_meri",
-// "meeting_luoto",
-// "meeting_kaisla",
-// "meeting_myrsky",
+const CATEGORIES = {
+  Healthcare: {
+    healthCareCenter: "Healthcare center",
+    mentalHealthCenter: "Mental health and addiction services",
+    childrenHealthCare: "Child health center",
+    mehilainenDental: "Mehiläinen dental center",
+    husLabXRay: "HUSLab X-ray",
+  },
+  "Meeting rooms": {
+    meeting_kari: "Kari",
+    meeting_aalto: "Aalto",
+    meeting_meri: "Meri",
+    meeting_luoto: "Luoto",
+    meeting_kaisla: "Kaisla",
+    meeting_myrsky: "Myrsky",
+    meeting_b31: "B31",
+  },
+  Uncaregorized: {
+    wc: "wc",
+    quietArea: "quietArea",
+    servicePoint: "servicePoint",
+    kela: "kela",
+    popup: "popup",
+    kohtaamo: "kohtaamo",
+    paja: "paja",
+    stage: "stage",
+    studio: "studio",
+    playingRoom: "playingRoom",
+    music: "music",
+    childrenBooks: "childrenBooks",
+    kidsLibraryInfo: "kidsLibraryInfo",
+    info: "info",
+    kidsPlayground: "kidsPlayground",
+    yesBox: "yesBox",
+    VOX: "VOX",
+    elevators: "elevators",
+  },
+};
 
 export const NavigationMenu = ({ onHighlightClick, onClose }) => {
   return (
@@ -19,38 +49,21 @@ export const NavigationMenu = ({ onHighlightClick, onClose }) => {
         <img src={CloseButton} alt="Close" />
       </button>
       <div className="navigation-menu-content">
-        <div className="category">
-          <div className="title">Meeting rooms</div>
-          <div className="buttons">
-            <button onClick={onHighlightClick("meeting_kari")}>Kari</button>
-            <button onClick={onHighlightClick("meeting_aalto")}>Aalto</button>
-            <button onClick={onHighlightClick("meeting_meri")}>Meri</button>
-            <button onClick={onHighlightClick("meeting_luoto")}>Luoto</button>
-            <button onClick={onHighlightClick("meeting_kaisla")}>Kaisla</button>
-            <button onClick={onHighlightClick("meeting_myrsky")}>Myrsky</button>
-            <button onClick={onHighlightClick("meeting_b31")}>B31</button>
+        {Object.keys(CATEGORIES).map((category) => (
+          <div className="category" key={`category-${category}`}>
+            <div className="title">{category}</div>
+            <div className="buttons">
+              {Object.keys(CATEGORIES[category]).map((highlightID) => (
+                <button
+                  key={`highlight-${highlightID}`}
+                  onClick={onHighlightClick(highlightID)}
+                >
+                  {CATEGORIES[category][highlightID]}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="category">
-          <div className="title">Healthcare</div>
-          <div className="buttons">
-            <button onClick={onHighlightClick("healthCareCenter")}>
-              Healthcare center
-            </button>
-            <button onClick={onHighlightClick("mentalHealthCenter")}>
-              Mental health and addiction services
-            </button>
-            <button onClick={onHighlightClick("childrenHealthCare")}>
-              Child health center
-            </button>
-            <button onClick={onHighlightClick("mehilainenDental")}>
-              Mehiläinen dental center
-            </button>
-            <button onClick={onHighlightClick("husLabXRay")}>
-              HUSLab X-ray
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

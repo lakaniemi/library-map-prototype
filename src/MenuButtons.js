@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./menu-buttons.css";
-import InfoButton from "./icons/info-24px.svg";
 import QRButton from "./icons/qr-24px.svg";
+import NavigateButton from "./icons/navigation-24px.svg";
 
 export const MenuButtons = ({ openNavigation }) => {
   // TODO: maybe display QR button only in tablet mode
@@ -14,7 +14,7 @@ export const MenuButtons = ({ openNavigation }) => {
         </button>
 
         <button className="icon-button info" onClick={openNavigation}>
-          <img src={InfoButton} alt="navigate to" />
+          <img src={NavigateButton} alt="navigate to" />
         </button>
       </div>
     </>
