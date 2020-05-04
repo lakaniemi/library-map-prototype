@@ -14,6 +14,8 @@ export const Content = ({ resetTransform }) => {
 
   const location = useLocation();
 
+  // If we detect a query paremeter ?highlight=something, let's set the highlight.
+  // This is mainly used for the QR code reading to keep highlight between devices.
   useEffect(() => {
     const highlightValue = new URLSearchParams(location.search).get(
       "highlight"
