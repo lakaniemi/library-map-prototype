@@ -42,3 +42,9 @@
   width: 80%;
   height: 80%;
 }
+
+@media only screen and (max-width: 600px) {
+  .qr {
+    visibility: hidden;
+  }
+}
