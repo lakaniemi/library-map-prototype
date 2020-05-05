@@ -4,12 +4,30 @@ import "./navigation-menu.css";
 import CloseButton from "./icons/close-24px.svg";
 
 const CATEGORIES = {
+  "Children & Youth": {
+    VOX: "VOX Youth Space",
+    yesBox: "YesBox",
+    kidsPlayground: "Playground",
+    kidsLibraryInfo: "Kids library info",
+    childrenBooks: "Children's books",
+  },
+  "Arts, culture & crafts": {
+    paja: "Makerspace",
+    studio: "Music studio",
+    playingRoom: "Music playing room",
+    kohtaamo: "Kohtaamo",
+    stage: "Stage",
+  },
   Healthcare: {
     healthCareCenter: "Healthcare center",
     mentalHealthCenter: "Mental health and addiction services",
     childrenHealthCare: "Child health center",
     mehilainenDental: "Mehiläinen dental center",
     husLabXRay: "HUSLab X-ray",
+  },
+  "Public services": {
+    kela: "KELA",
+    servicePoint: "Espoo city service point",
   },
   "Meeting rooms": {
     meeting_kari: "Kari",
@@ -18,27 +36,13 @@ const CATEGORIES = {
     meeting_luoto: "Luoto",
     meeting_kaisla: "Kaisla",
     meeting_myrsky: "Myrsky",
-    meeting_b31: "B31",
   },
   Other: {
-    wc: "wc",
-    quietArea: "quietArea",
-    servicePoint: "servicePoint",
-    kela: "kela",
-    popup: "popup",
-    kohtaamo: "kohtaamo",
-    paja: "paja",
-    stage: "stage",
-    studio: "studio",
-    playingRoom: "playingRoom",
-    music: "music",
-    childrenBooks: "childrenBooks",
-    kidsLibraryInfo: "kidsLibraryInfo",
-    info: "info",
-    kidsPlayground: "kidsPlayground",
-    yesBox: "yesBox",
-    VOX: "VOX",
-    elevators: "elevators",
+    info: "Info",
+    quietArea: "Quiet area",
+    wc: "Toilets",
+    elevators: "Elevators",
+    popup: "Popup",
   },
 };
 
