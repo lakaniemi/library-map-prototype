@@ -29,18 +29,11 @@ export const Map = ({ highlight }) => {
       height={`${windowSize.height}px`}
       viewBox="0 0 4096 2534"
     >
-      <path
-        fill="#fff"
-        stroke="#3C3C3C"
-        strokeWidth="1"
-        d="M0 0H4096V2534H0z"
-      ></path>
+      <path fill="#fff" d="M0 0H4096V2534H0z"></path>
       <path
         fill="#C1FFF0"
         fillRule="nonzero"
         stroke="#4F4F4F"
-        strokeLinejoin="miter"
-        strokeMiterlimit="4"
         strokeOpacity="0"
         strokeWidth="3"
         d="M164.962 2248.82l401.172 1.08 2.1 259.71-545.91-1.68v-427.74h143.057l-.419 168.63z"
@@ -49,6 +42,7 @@ export const Map = ({ highlight }) => {
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -57,14 +51,13 @@ export const Map = ({ highlight }) => {
       <g fill="#FDEC5A" stroke="#4F4F4F" strokeOpacity="0">
         <path
           strokeLinecap="round"
+          strokeLinejoin="round"
           strokeMiterlimit="1.5"
           strokeWidth="4"
           d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46zM2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46zM2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05zM2751.06 2304.29l2.66 204.01h199.12l-.82-202.97M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
         ></path>
         <path
           fillRule="nonzero"
-          strokeLinejoin="miter"
-          strokeMiterlimit="4"
           strokeWidth="3"
           d="M590.219 774.946l-.226-155.591 201.951 71.774-45.576 122.072-156.149-38.255z"
         ></path>
@@ -73,6 +66,7 @@ export const Map = ({ highlight }) => {
         fill="#FFC79A"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="2.58"
@@ -83,6 +77,7 @@ export const Map = ({ highlight }) => {
         fill="#FFA9A9"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -93,7 +88,6 @@ export const Map = ({ highlight }) => {
         stroke="#323232"
         strokeDasharray="8,8,0,0"
         strokeLinecap="round"
-        strokeLinejoin="miter"
         strokeMiterlimit="3"
         strokeOpacity="0"
         strokeWidth="4"
@@ -103,6 +97,7 @@ export const Map = ({ highlight }) => {
         fill="#FFA9A9"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -111,8 +106,6 @@ export const Map = ({ highlight }) => {
       <path
         fill="#B2FFAE"
         stroke="#4F4F4F"
-        strokeLinejoin="miter"
-        strokeMiterlimit="4"
         strokeOpacity="0"
         strokeWidth="3"
         d="M3582.5 1531.5H3836.5V1767.5H3582.5z"
@@ -125,8 +118,6 @@ export const Map = ({ highlight }) => {
         fill="#B2FFAE"
         fillRule="nonzero"
         stroke="#4F4F4F"
-        strokeLinejoin="miter"
-        strokeMiterlimit="4"
         strokeOpacity="0"
         strokeWidth="3"
         d="M3450.08 1076.15l-94.72-.23.04 76.89-150.79-.33-.66-71.65-111.1-268.102 268.06-110.197 88.53 3.547.64 370.072z"
@@ -135,6 +126,7 @@ export const Map = ({ highlight }) => {
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -144,6 +136,7 @@ export const Map = ({ highlight }) => {
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -154,6 +147,7 @@ export const Map = ({ highlight }) => {
         fill="#9ED3FF"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -164,8 +158,6 @@ export const Map = ({ highlight }) => {
         fill="#9ED3FF"
         fillRule="nonzero"
         stroke="#4F4F4F"
-        strokeLinejoin="miter"
-        strokeMiterlimit="4"
         strokeOpacity="0"
         strokeWidth="3"
         d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469zM2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
@@ -174,6 +166,7 @@ export const Map = ({ highlight }) => {
         fill="#9ED3FF"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -183,6 +176,7 @@ export const Map = ({ highlight }) => {
         fill="#9ED3FF"
         stroke="#4F4F4F"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
@@ -193,6 +187,7 @@ export const Map = ({ highlight }) => {
         fill="none"
         stroke="#3C3C3C"
         strokeLinecap="round"
+        strokeLinejoin="round"
         strokeMiterlimit="1.5"
         strokeWidth="4"
       >
@@ -230,8 +225,6 @@ export const Map = ({ highlight }) => {
         fill="none"
         fillRule="nonzero"
         stroke="#000"
-        strokeLinejoin="miter"
-        strokeMiterlimit="4"
         strokeWidth="4"
         d="M1509 1582.5h-308.5v-47l109-662L22.5 419v2090.5h1287l-95-749H1509v749h2566V29.5H624.5V323l1688 847.5V1412L1509 1535.5v47z"
       ></path>
@@ -314,52 +307,72 @@ export const Map = ({ highlight }) => {
         </text>
       </g>
       <g>
+        <circle cx="2490.45" cy="1298.77" r="50.54" fill="red"></circle>
+        <text
+          x="2423"
+          y="1181.99"
+          fill="red"
+          fontFamily="'ArialMT', 'Arial', sans-serif"
+          fontSize="48"
+          transform="translate(16.152 48.418)"
+        >
+          YOU
+        </text>
+      </g>
+      <g>
         <g
           id="wc"
           visibility={getVisibility("wc")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
-          strokeMiterlimit="1.5"
+          strokeLinecap="square"
           strokeWidth="16"
         >
-          <path d="M732.739 1424.04l-.328 149.9 247.327 2.62L1005 1424.69l-272.261-.65zM3695.68 1873l-1.65 145.32 74.79-.99-1.64-65.6 39.37-1.32v-79.05l-110.87 1.64zM1882.95 280.801l-.99 132.192 91.85 1.64 1.64-52.811 227.97.328.66-81.349h-321.13z"></path>
+          <path
+            strokeMiterlimit="5"
+            d="M732.739 1424.04l-.328 149.9 247.327 2.62L1005 1424.69l-272.261-.65z"
+          ></path>
+          <path
+            strokeMiterlimit="1.5"
+            d="M3695.68 1873l-1.65 145.32 74.79-.99-1.64-65.6 39.37-1.32v-79.05l-110.87 1.64zM1882.95 280.801l-.99 132.192 91.85 1.64 1.64-52.811 227.97.328.66-81.349h-321.13z"
+          ></path>
         </g>
-        <g fill="none" stroke="red" strokeMiterlimit="1.5" strokeWidth="16">
+        <g fill="none" stroke="red" strokeLinecap="square" strokeWidth="16">
           <path
             id="meeting_kari"
             visibility={getVisibility("meeting_kari")}
-            strokeLinecap="round"
+            strokeMiterlimit="1.5"
             d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46z"
           ></path>
           <path
             id="meeting_aalto"
             visibility={getVisibility("meeting_aalto")}
-            strokeLinecap="round"
+            strokeMiterlimit="1.5"
             d="M2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46z"
           ></path>
           <path
             id="meeting_meri"
             visibility={getVisibility("meeting_meri")}
-            strokeLinecap="round"
+            strokeMiterlimit="1.5"
             d="M2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05z"
           ></path>
           <path
             id="meeting_luoto"
             visibility={getVisibility("meeting_luoto")}
-            strokeLinecap="round"
+            strokeMiterlimit="1.5"
             d="M2952.02 2305.33l-200.96-1.04 2.66 204.01h199.12l-.82-202.97z"
           ></path>
           <path
             id="meeting_kaisla"
             visibility={getVisibility("meeting_kaisla")}
-            strokeLinecap="round"
+            strokeMiterlimit="1.5"
             d="M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
           ></path>
           <path
             id="meeting_myrsky"
             visibility={getVisibility("meeting_myrsky")}
             fillRule="nonzero"
+            strokeMiterlimit="5"
             d="M590.219 774.946l-.226-155.591 201.951 71.774-45.576 122.072-156.149-38.255z"
           ></path>
         </g>
@@ -369,6 +382,7 @@ export const Map = ({ highlight }) => {
           fill="none"
           fillRule="nonzero"
           stroke="red"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M164.962 2248.82l401.172 1.08 2.1 259.71-545.91-1.68v-427.74h143.057l-.419 168.63z"
@@ -378,17 +392,17 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("servicePoint")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
-          d="M2033.68 1817.01l.95 157.8 438.12 3.55.53-160.98-439.6-.37z"
+          d="M2033.68 1817.01l.95 157.8 452.98 4.69 2.05-160.6-455.98-1.89z"
         ></path>
         <path
           id="kela"
           visibility={getVisibility("kela")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M1632.3 1817.85l-.11 157.59 410.25-1.63.68-157.07-410.82 1.11z"
@@ -398,7 +412,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("popup")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M910.667 733.232l-46.353 130.641 229.746 78.263 45.69-126.968-229.083-81.936z"
@@ -408,7 +422,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("kohtaamo")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M2491.18 1818.84l-1.97 179.43 215.51 1.31-1.31-178.77-212.23-1.97z"
@@ -418,7 +432,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("paja")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M2954.96 2309.34l.41 198.86 742.96-.41-4.1-198.04-739.27-.41z"
@@ -428,7 +442,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("stage")}
           fill="none"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16.77"
           d="M2789.5 1948.5H3011.5V2241.5H2789.5z"
           transform="matrix(.95222 0 0 .95618 133.274 85.385)"
@@ -438,7 +453,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("studio")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M2488.95 2002.01l.33 90.86 214.19 1.97.33-93.16-214.85.33z"
@@ -448,7 +463,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("playingRoom")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M2488.95 2095.83l-.33 126.61 215.18 1.31-.98-126.28-213.87-1.64z"
@@ -458,8 +473,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("childrenBooks")}
           fill="none"
           stroke="red"
-          strokeLinejoin="miter"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M3477.5 1861c0-40.01-32.49-72.5-72.5-72.5h-258c-40.01 0-72.5 32.49-72.5 72.5v267c0 40.01 32.49 72.5 72.5 72.5h258c40.01 0 72.5-32.49 72.5-72.5v-267z"
         ></path>
@@ -468,7 +483,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("kidsLibraryInfo")}
           fill="none"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M3381.5 1597.5H3512.5V1701.5H3381.5z"
         ></path>
@@ -477,7 +493,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("info")}
           fill="none"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M2696.5 1404.5H2976.5V1557.5H2696.5z"
           transform="translate(-6.15 -6.15)"
@@ -487,7 +504,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("kidsPlayground")}
           fill="none"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M3582.5 1531.5H3836.5V1767.5H3582.5z"
         ></path>
@@ -496,7 +514,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("yesBox")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M3143.48 1399.88l-162.47-1.54.51 152.22 166.58.52-4.62-151.2z"
@@ -507,7 +525,8 @@ export const Map = ({ highlight }) => {
           fill="none"
           fillRule="nonzero"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
+          strokeMiterlimit="1.5"
           strokeWidth="16"
           d="M3450.08 1076.15l-94.72-.23.04 76.89-150.79-.33-.66-71.65-111.1-268.102 268.06-110.197 88.53 3.547.64 370.072z"
         ></path>
@@ -515,7 +534,7 @@ export const Map = ({ highlight }) => {
           <path
             fill="none"
             stroke="red"
-            strokeLinecap="round"
+            strokeLinecap="square"
             strokeMiterlimit="1.5"
             strokeWidth="16"
             d="M1884.58 492.401l-2.05 93.281 289.58 1.025-1.03-92.256-286.5-2.05z"
@@ -523,7 +542,7 @@ export const Map = ({ highlight }) => {
           <path
             fill="none"
             stroke="red"
-            strokeLinecap="round"
+            strokeLinecap="square"
             strokeMiterlimit="1.5"
             strokeWidth="16"
             d="M1927.12 496.501l2.05 90.206 288.55-1.537-.51-86.618-290.09-2.051z"
@@ -535,7 +554,7 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("childrenHealthCare")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
+          strokeLinecap="square"
           strokeMiterlimit="1.5"
           strokeWidth="16"
         >
@@ -547,7 +566,7 @@ export const Map = ({ highlight }) => {
           fill="none"
           fillRule="nonzero"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
           strokeWidth="16"
           d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469z"
         ></path>
@@ -557,7 +576,7 @@ export const Map = ({ highlight }) => {
           fill="none"
           fillRule="nonzero"
           stroke="red"
-          strokeMiterlimit="4"
+          strokeLinecap="square"
           strokeWidth="16"
           d="M2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
         ></path>
@@ -566,8 +585,8 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("mentalHealthCenter")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
-          strokeMiterlimit="1.5"
+          strokeLinecap="square"
+          strokeMiterlimit="5"
           strokeWidth="16"
           d="M1044.97 1790.63l76.39 666.16 181.31 3.84-87-689.7-170.7 19.7z"
         ></path>
@@ -576,11 +595,19 @@ export const Map = ({ highlight }) => {
           visibility={getVisibility("healthCareCenter")}
           fill="none"
           stroke="red"
-          strokeLinecap="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="16"
+          strokeLinecap="square"
         >
-          <path d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41zM167.951 1226.36l1.64 253.8 271.847-3.28.41-252.17-273.897 1.65M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"></path>
+          <path
+            strokeMiterlimit="1.5"
+            strokeWidth="16"
+            d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41zM167.951 1226.36l1.64 253.8 271.847-3.28.41-252.17-273.897 1.65M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"
+          ></path>
+          <path
+            strokeDasharray="8,8,0,0"
+            strokeMiterlimit="5"
+            strokeWidth="4"
+            d="M2479.24 1352.9l-214.14 310.59-1581.67 29.07-14.537-500.08"
+          ></path>
         </g>
       </g>
     </svg>
