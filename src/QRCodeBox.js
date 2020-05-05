@@ -5,7 +5,7 @@ import "./qr-code-box.css";
 
 const BASE_URL =
   process.env.NODE_ENV === "development"
-    ? "http://192.168.0.100:3000"
+    ? "http://192.168.0.108:3000"
     : "https://library-map-prototype.netlify.app/";
 
 export const QRCodeBox = ({ highlight }) => {
