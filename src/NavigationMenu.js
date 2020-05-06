@@ -22,7 +22,7 @@ const CATEGORIES = {
     healthCareCenter: "Healthcare center",
     mentalHealthCenter: "Mental health and addiction services",
     childrenHealthCare: "Child health center",
-    mehilainenDental: "Mehiläinen dental center",
+    mehilainenDental: "Mehiläinen dental care center",
     husLabXRay: "HUSLab X-ray",
   },
   "Public services": {
@@ -41,6 +41,7 @@ const CATEGORIES = {
     info: "Info",
     quietArea: "Quiet area",
     wc: "Toilets",
+    escalator: "Escalator",
     elevators: "Elevators",
     popup: "Popup",
   },

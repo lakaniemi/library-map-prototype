@@ -25,6 +25,7 @@ export const highlightIDs = [
   "yesBox",
   "VOX",
   "elevators",
+  "escalator",
   "childrenHealthCare",
   "mehilainenDental",
   "husLabXRay",
