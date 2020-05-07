@@ -33,7 +33,7 @@
 }
 
 .navigation-menu-content .category {
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .navigation-menu-content .category .title {
@@ -42,16 +42,34 @@
   padding-bottom: 0.5rem;
 }
 
-.navigation-menu-content .category .buttons {
-  /* TODO */
+.navigation-menu-content .category .category-buttons button {
+  border: 0;
+  padding: 0.5rem 0.8rem;
+  margin-right: 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
 }
 
-.navigation-menu-content .category .buttons button {
-  background: none;
-  border: 0;
-  padding: 0.5rem 0.8rem 0.5rem 0.2rem;
-  margin-right: 2rem;
-  margin-bottom: 0.8rem;
-  color: #f0f0f0;
-  font-size: 1rem;
+.category-buttons .children-and-youth {
+  background: rgb(178, 255, 174);
+}
+
+.category-buttons .arts-and-crafts {
+  background: rgb(255, 169, 169);
+}
+
+.category-buttons .healthcare {
+  background: rgb(158, 211, 255);
+}
+
+.category-buttons .public-services {
+  background: rgb(255, 199, 154);
+}
+
+.category-buttons .meeting-rooms {
+  background: rgb(253, 236, 90);
+}
+
+.category-buttons .other {
+  background: rgb(193, 255, 240);
 }

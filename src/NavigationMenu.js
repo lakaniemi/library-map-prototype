@@ -47,6 +47,15 @@ const CATEGORIES = {
   },
 };
 
+const buttonClassNames = {
+  "Children & Youth": "children-and-youth",
+  "Arts, culture & crafts": "arts-and-crafts",
+  Healthcare: "healthcare",
+  "Public services": "public-services",
+  "Meeting rooms": "meeting-rooms",
+  Other: "other",
+};
+
 export const NavigationMenu = ({ onHighlightClick, onClose }) => {
   return (
     <div className="menu-overlay">
@@ -57,10 +66,11 @@ export const NavigationMenu = ({ onHighlightClick, onClose }) => {
         {Object.keys(CATEGORIES).map((category) => (
           <div className="category" key={`category-${category}`}>
             <div className="title">{category}</div>
-            <div className="buttons">
+            <div className="category-buttons">
               {Object.keys(CATEGORIES[category]).map((highlightID) => (
                 <button
                   key={`highlight-${highlightID}`}
+                  className={buttonClassNames[category]}
                   onClick={onHighlightClick(highlightID)}
                 >
                   {CATEGORIES[category][highlightID]}
