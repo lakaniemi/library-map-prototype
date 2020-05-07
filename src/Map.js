@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { highlightIDs } from "./data";
 import { useWindowSize } from "./hooks";
 
@@ -6,6 +6,8 @@ import { useWindowSize } from "./hooks";
 //       replace: $0\nvisibility={getVisibility("$2")}
 
 export const Map = ({ highlight }) => {
+  const [clickStartTime, setClickStartTime] = useState({});
+  const [doubleClickTimer, setDoubleClickTimer] = useState({});
   const windowSize = useWindowSize();
 
   const getVisibility = (elementId) => {
@@ -18,6 +20,62 @@ export const Map = ({ highlight }) => {
     }
 
     return highlight === elementId ? "visible" : "hidden";
+  };
+
+  const onMouseDown = (elementId) => (e) => {
+    // only primary click
+    if (e.button !== 0) return;
+
+    setClickStartTime((prevState) => ({
+      ...prevState,
+      [elementId]: Date.now(),
+    }));
+  };
+
+  // mouseup should be called in 150ms
+  const onMouseUp = (elementId) => (e) => {
+    // only primary click
+    if (e.button !== 0) return;
+
+    // No mouseup called before???
+    if (clickStartTime[elementId] === undefined) return;
+
+    const difference = Date.now() - clickStartTime[elementId];
+
+    // Let's count anything where mousedown and mouseup happened in 250ms a click
+    if (difference <= 250) {
+      // A timer is still in progress, so this is a double click
+      if (doubleClickTimer[elementId]) {
+        clearTimeout(doubleClickTimer[elementId]);
+        setDoubleClickTimer((prevState) => ({
+          ...prevState,
+          [elementId]: undefined,
+        }));
+      } else {
+        // Timer not found, so this is a first click. Let's initiate timer.
+        const timer = setTimeout(handleClick(elementId), 500);
+        setDoubleClickTimer((prevState) => ({
+          ...prevState,
+          [elementId]: timer,
+        }));
+      }
+    }
+
+    // Reset clickStartTime for next occasion
+    setClickStartTime((prevState) => ({
+      ...prevState,
+      [elementId]: undefined,
+    }));
+  };
+
+  const handleClick = (elementId) => () => {
+    console.log(`${elementId} was single clicked, please handle`);
+
+    // Clear the timer. No need for clearTimeout as it already expired.
+    setDoubleClickTimer((prevState) => ({
+      ...prevState,
+      [elementId]: undefined,
+    }));
   };
 
   return (
