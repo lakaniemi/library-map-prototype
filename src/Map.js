@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { highlightIDs } from "./data";
 import { useWindowSize } from "./hooks";
 
+// Normal IDs
 // Regex find:    (id="([a-zA-Z0-9_]*)")
 //       replace: $0\nvisibility={getVisibility("$2")}
 
-export const Map = ({ highlight }) => {
+// Clickable IDs
+// Regex find:    (id="clickable:([a-zA-Z0-9_]*):[0-9]")
+//       replace: $0\nonMouseUp={onMouseUp("$2")}\nonMouseDown={onMouseDown("$2")}
+
+export const Map = ({ highlight, setHighlight }) => {
   const [clickStartTime, setClickStartTime] = useState({});
   const [doubleClickTimer, setDoubleClickTimer] = useState({});
   const windowSize = useWindowSize();
@@ -69,7 +74,8 @@ export const Map = ({ highlight }) => {
   };
 
   const handleClick = (elementId) => () => {
-    console.log(`${elementId} was single clicked, please handle`);
+    // Set highlight to the element clicked
+    setHighlight(elementId);
 
     // Clear the timer. No need for clearTimeout as it already expired.
     setDoubleClickTimer((prevState) => ({
@@ -89,6 +95,9 @@ export const Map = ({ highlight }) => {
     >
       <path fill="#fff" d="M0 0H4096V2534H0z"></path>
       <path
+        id="clickable:quietArea:0"
+        onMouseUp={onMouseUp("quietArea")}
+        onMouseDown={onMouseDown("quietArea")}
         fill="#C1FFF0"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -97,10 +106,16 @@ export const Map = ({ highlight }) => {
         d="M164.962 2248.82l401.172 1.08 2.1 259.71-545.91-1.68v-427.74h143.057l-.419 168.63z"
       ></path>
       <path
+        id="clickable:escalator:0"
+        onMouseUp={onMouseUp("escalator")}
+        onMouseDown={onMouseDown("escalator")}
         fill="#C1FFF0"
         d="M2340.89 1133.17l288.97 145.48 44.01-86.6-293.53-143.48-39.45 84.6z"
       ></path>
       <path
+        id="clickable:popup:0"
+        onMouseUp={onMouseUp("popup")}
+        onMouseDown={onMouseDown("popup")}
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -112,19 +127,68 @@ export const Map = ({ highlight }) => {
       ></path>
       <g fill="#FDEC5A" stroke="#4F4F4F" strokeOpacity="0">
         <path
+          id="clickable:meeting_kari:0"
+          onMouseUp={onMouseUp("meeting_kari")}
+          onMouseDown={onMouseDown("meeting_kari")}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeMiterlimit="1.5"
           strokeWidth="4"
-          d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46zM2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46zM2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05zM2751.06 2304.29l2.66 204.01h199.12l-.82-202.97M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
+          d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46z"
         ></path>
         <path
+          id="clickable:meeting_aalto:0"
+          onMouseUp={onMouseUp("meeting_aalto")}
+          onMouseDown={onMouseDown("meeting_aalto")}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeWidth="4"
+          d="M2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46z"
+        ></path>
+        <path
+          id="clickable:meeting_meri:0"
+          onMouseUp={onMouseUp("meeting_meri")}
+          onMouseDown={onMouseDown("meeting_meri")}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeWidth="4"
+          d="M2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05z"
+        ></path>
+        <path
+          id="clickable:meeting_luoto:0"
+          onMouseUp={onMouseUp("meeting_luoto")}
+          onMouseDown={onMouseDown("meeting_luoto")}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeWidth="4"
+          d="M2751.06 2304.29l2.66 204.01h199.12l-.82-202.97"
+        ></path>
+        <path
+          id="clickable:meeting_kaisla:0"
+          onMouseUp={onMouseUp("meeting_kaisla")}
+          onMouseDown={onMouseDown("meeting_kaisla")}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeWidth="4"
+          d="M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
+        ></path>
+        <path
+          id="clickable:meeting_myrsky:0"
+          onMouseUp={onMouseUp("meeting_myrsky")}
+          onMouseDown={onMouseDown("meeting_myrsky")}
           fillRule="nonzero"
           strokeWidth="3"
           d="M590.219 774.946l-.226-155.591 201.951 71.774-45.576 122.072-156.149-38.255z"
         ></path>
       </g>
       <path
+        id="clickable:servicePoint:0"
+        onMouseUp={onMouseUp("servicePoint")}
+        onMouseDown={onMouseDown("servicePoint")}
         fill="#FFC79A"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -132,10 +196,27 @@ export const Map = ({ highlight }) => {
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="2.58"
-        d="M1632.3 1817.85l-.11 157.59 437.57 1.63 1.51-159.88-438.97.66z"
+        d="M1841.82 1817.49l.08 160.1 227.86-.52 1.51-159.88-229.45.3z"
         transform="matrix(1.95244 0 0 1 -1554.56 0)"
       ></path>
       <path
+        id="clickable:kela:0"
+        onMouseUp={onMouseUp("kela")}
+        onMouseDown={onMouseDown("kela")}
+        fill="#FFC79A"
+        stroke="#4F4F4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="1.5"
+        strokeOpacity="0"
+        strokeWidth="2.58"
+        d="M1632.3 1817.85l-.11 157.59 209.91 3.03-.13-160.98-209.67.36z"
+        transform="matrix(1.95244 0 0 1 -1554.56 0)"
+      ></path>
+      <path
+        id="clickable:kohtaamo:0"
+        onMouseUp={onMouseUp("kohtaamo")}
+        onMouseDown={onMouseDown("kohtaamo")}
         fill="#FFA9A9"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -146,6 +227,9 @@ export const Map = ({ highlight }) => {
         d="M2491.18 1818.84l-1.97 179.43 215.51 1.31-1.31-178.77-212.23-1.97z"
       ></path>
       <path
+        id="clickable:stage:0"
+        onMouseUp={onMouseUp("stage")}
+        onMouseDown={onMouseDown("stage")}
         fill="#FFA9A9"
         stroke="#323232"
         strokeDasharray="8,8,0,0"
@@ -156,6 +240,9 @@ export const Map = ({ highlight }) => {
         d="M2810.86 2082.05l-2.06 124.61 170.57 2.06 1.15-124.84-169.66-1.83z"
       ></path>
       <path
+        id="clickable:paja:0"
+        onMouseUp={onMouseUp("paja")}
+        onMouseDown={onMouseDown("paja")}
         fill="#FFA9A9"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -163,9 +250,38 @@ export const Map = ({ highlight }) => {
         strokeMiterlimit="1.5"
         strokeOpacity="0"
         strokeWidth="4"
-        d="M2954.96 2309.34l.41 198.86 742.96-.41-4.1-198.04-739.27-.41zM2488.95 2002.01l.33 90.86 214.19 1.97.33-93.16-214.85.33zM2488.95 2095.83l-.33 126.61 215.18 1.31-.98-126.28-213.87-1.64z"
+        d="M2954.96 2309.34l.41 198.86 742.96-.41-4.1-198.04-739.27-.41z"
       ></path>
       <path
+        id="clickable:studio:0"
+        onMouseUp={onMouseUp("studio")}
+        onMouseDown={onMouseDown("studio")}
+        fill="#FFA9A9"
+        stroke="#4F4F4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="1.5"
+        strokeOpacity="0"
+        strokeWidth="4"
+        d="M2488.95 2002.01l.33 90.86 214.19 1.97.33-93.16-214.85.33z"
+      ></path>
+      <path
+        id="clickable:playingRoom:0"
+        onMouseUp={onMouseUp("playingRoom")}
+        onMouseDown={onMouseDown("playingRoom")}
+        fill="#FFA9A9"
+        stroke="#4F4F4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="1.5"
+        strokeOpacity="0"
+        strokeWidth="4"
+        d="M2488.95 2095.83l-.33 126.61 215.18 1.31-.98-126.28-213.87-1.64z"
+      ></path>
+      <path
+        id="clickable:kidsPlayground:0"
+        onMouseUp={onMouseUp("kidsPlayground")}
+        onMouseDown={onMouseDown("kidsPlayground")}
         fill="#B2FFAE"
         stroke="#4F4F4F"
         strokeOpacity="0"
@@ -173,10 +289,16 @@ export const Map = ({ highlight }) => {
         d="M3582.5 1531.5H3836.5V1767.5H3582.5z"
       ></path>
       <path
+        id="clickable:yesBox:0"
+        onMouseUp={onMouseUp("yesBox")}
+        onMouseDown={onMouseDown("yesBox")}
         fill="#B2FFAE"
         d="M2981.01 1398.34l.51 152.22 166.58.52-4.62-151.2"
       ></path>
       <path
+        id="clickable:VOX:0"
+        onMouseUp={onMouseUp("VOX")}
+        onMouseDown={onMouseDown("VOX")}
         fill="#B2FFAE"
         fillRule="nonzero"
         stroke="#4F4F4F"
@@ -185,6 +307,9 @@ export const Map = ({ highlight }) => {
         d="M3450.08 1076.15l-94.72-.23.04 76.89-150.79-.33-.66-71.65-111.1-268.102 268.06-110.197 88.53 3.547.64 370.072z"
       ></path>
       <path
+        id="clickable:elevators:1"
+        onMouseUp={onMouseUp("elevators")}
+        onMouseDown={onMouseDown("elevators")}
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -195,6 +320,9 @@ export const Map = ({ highlight }) => {
         d="M1884.58 492.401l-2.05 93.281 289.58 1.025-1.03-92.256-286.5-2.05z"
       ></path>
       <path
+        id="clickable:elevators:0"
+        onMouseUp={onMouseUp("elevators")}
+        onMouseDown={onMouseDown("elevators")}
         fill="#C1FFF0"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -214,17 +342,51 @@ export const Map = ({ highlight }) => {
         strokeOpacity="0"
         strokeWidth="4"
       >
-        <path d="M3909.6 1869.1l166.06.51-2.05-1150.637-158.37-1.538-5.64 1151.665zM3356.18 1077.56l1.19 152.21 481.14.63.64-151.19-238.97-.64-2.56-373.511-147.08 1.282.82 370.949-95.18.27zM3356.72 1319.46v155.68l360.7-1.92-1.92-153.12-358.78-.64z"></path>
+        <path
+          id="clickable:childrenHealthCare:2"
+          onMouseUp={onMouseUp("childrenHealthCare")}
+          onMouseDown={onMouseDown("childrenHealthCare")}
+          d="M3909.6 1869.1l166.06.51-2.05-1150.637-158.37-1.538-5.64 1151.665z"
+        ></path>
+        <path
+          id="clickable:childrenHealthCare:1"
+          onMouseUp={onMouseUp("childrenHealthCare")}
+          onMouseDown={onMouseDown("childrenHealthCare")}
+          d="M3356.18 1077.56l1.19 152.21 481.14.63.64-151.19-238.97-.64-2.56-373.511-147.08 1.282.82 370.949-95.18.27z"
+        ></path>
+        <path
+          id="clickable:childrenHealthCare:0"
+          onMouseUp={onMouseUp("childrenHealthCare")}
+          onMouseDown={onMouseDown("childrenHealthCare")}
+          d="M3356.72 1319.46v155.68l360.7-1.92-1.92-153.12-358.78-.64z"
+        ></path>
       </g>
       <path
+        id="clickable:mehilainenDental:0"
+        onMouseUp={onMouseUp("mehilainenDental")}
+        onMouseDown={onMouseDown("mehilainenDental")}
         fill="#9ED3FF"
         fillRule="nonzero"
         stroke="#4F4F4F"
         strokeOpacity="0"
         strokeWidth="3"
-        d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469zM2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
+        d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469z"
       ></path>
       <path
+        id="clickable:husLabXRay:0"
+        onMouseUp={onMouseUp("husLabXRay")}
+        onMouseDown={onMouseDown("husLabXRay")}
+        fill="#9ED3FF"
+        fillRule="nonzero"
+        stroke="#4F4F4F"
+        strokeOpacity="0"
+        strokeWidth="3"
+        d="M2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
+      ></path>
+      <path
+        id="clickable:mentalHealthCenter:0"
+        onMouseUp={onMouseUp("mentalHealthCenter")}
+        onMouseDown={onMouseDown("mentalHealthCenter")}
         fill="#9ED3FF"
         stroke="#4F4F4F"
         strokeLinecap="round"
@@ -243,7 +405,24 @@ export const Map = ({ highlight }) => {
         strokeOpacity="0"
         strokeWidth="4"
       >
-        <path d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41zM167.951 1226.36l1.64 253.8 271.847-3.28.41-252.17-273.897 1.65M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"></path>
+        <path
+          id="clickable:healthCareCenter:2"
+          onMouseUp={onMouseUp("healthCareCenter")}
+          onMouseDown={onMouseDown("healthCareCenter")}
+          d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41z"
+        ></path>
+        <path
+          id="clickable:healthCareCenter:1"
+          onMouseUp={onMouseUp("healthCareCenter")}
+          onMouseDown={onMouseDown("healthCareCenter")}
+          d="M167.951 1226.36l1.64 253.8 271.847-3.28.41-252.17-273.897 1.65"
+        ></path>
+        <path
+          id="clickable:healthCareCenter:0"
+          onMouseUp={onMouseUp("healthCareCenter")}
+          onMouseDown={onMouseDown("healthCareCenter")}
+          d="M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"
+        ></path>
       </g>
       <g fill="none" stroke="#3C3C3C" strokeWidth="4">
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
@@ -285,97 +464,112 @@ export const Map = ({ highlight }) => {
       </g>
       <path
         fill="none"
-        fillRule="nonzero"
         stroke="#000"
         strokeWidth="4"
         d="M1509 1582.5h-308.5v-47l109-662L22.5 419v2090.5h1287l-95-749H1509v749h2566V29.5H624.5V323l1699.86 844.71 55.99-120.13 293.88 143.96-46.32 90.35L2312.5 1412 1509 1535.5v47z"
       ></path>
       <g>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.073 0v-.716h.095v.355l.355-.355h.129l-.3.29L.665 0H.54L.285-.362l-.117.114V0H.073z"
-          transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1662.14 1926.21) scale(78.6768)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
-          transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1714.61 1926.21) scale(78.6768)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.073 0v-.716h.095v.632h.353V0H.073z"
-          transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1767.09 1926.21) scale(78.6768)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
-          transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1810.85 1926.21) scale(78.6768)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.074 0v-.716h.143l.169.507.034.106.038-.115.172-.498h.127V0H.666v-.599L.458 0H.373L.166-.609V0H.074z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3181.92 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3221.91 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.073 0v-.716h.095v.355l.355-.355h.129l-.3.29L.665 0H.54L.285-.362l-.117.114V0H.073z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3253.92 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3285.94 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.079 0v-.716h.317c.064 0 .112.007.146.019a.16.16 0 01.079.069c.02.032.03.068.03.107a.185.185 0 01-.049.129.247.247 0 01-.153.066.235.235 0 01.057.036.48.48 0 01.079.095L.709 0H.59L.496-.149a1.474 1.474 0 00-.069-.099.229.229 0 00-.048-.047.11.11 0 00-.043-.019.225.225 0 00-.053-.004h-.11V0H.079zm.094-.4h.204a.312.312 0 00.102-.013.114.114 0 00.037-.191C.492-.626.453-.637.4-.637H.173V-.4z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3317.95 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.045-.23l.089-.008a.199.199 0 00.03.088.155.155 0 00.072.056.273.273 0 00.11.021.252.252 0 00.095-.016.129.129 0 00.062-.044.1.1 0 00.02-.061.093.093 0 00-.019-.059.141.141 0 00-.065-.042.937.937 0 00-.127-.035.644.644 0 01-.138-.045.196.196 0 01-.077-.067.168.168 0 01-.025-.089c0-.036.011-.07.031-.101a.198.198 0 01.09-.072.343.343 0 01.131-.024c.053 0 .1.009.141.026a.205.205 0 01.128.188l-.091.007A.143.143 0 00.453-.61C.425-.633.383-.645.328-.645c-.057 0-.099.011-.125.032a.094.094 0 00-.039.076.08.08 0 00.027.063.37.37 0 00.143.051c.077.018.13.033.159.046a.223.223 0 01.092.073c.02.03.03.063.03.102a.196.196 0 01-.033.108.221.221 0 01-.094.078.41.41 0 01-.301 0 .227.227 0 01-.103-.085.239.239 0 01-.039-.129z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3352.62 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.077 0v-.716h.27c.048 0 .084.002.109.007a.219.219 0 01.088.033c.024.017.043.04.058.07a.223.223 0 01.022.097.22.22 0 01-.059.155c-.038.042-.108.063-.21.063H.172V0H.077zm.095-.375h.185c.061 0 .105-.012.13-.035.026-.022.039-.055.039-.096a.132.132 0 00-.023-.077.107.107 0 00-.06-.042.423.423 0 00-.088-.006H.172v.256z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3384.63 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3413.09 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.588-.251l.095.024a.318.318 0 01-.108.178.292.292 0 01-.189.061.334.334 0 01-.188-.047.294.294 0 01-.11-.136.477.477 0 01-.038-.192c0-.075.014-.14.043-.195a.292.292 0 01.121-.127.356.356 0 01.174-.043c.071 0 .132.018.18.055A.278.278 0 01.67-.52l-.093.022a.216.216 0 00-.072-.113.191.191 0 00-.119-.036.228.228 0 00-.138.04.205.205 0 00-.078.106.436.436 0 00.004.297.195.195 0 00.083.101.226.226 0 00.121.034.203.203 0 00.135-.046.232.232 0 00.075-.136z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3445.1 2395.57)"
-        ></path>
-        <path
-          fill="#3C3C3C"
-          fillRule="nonzero"
-          d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
-          transform="translate(-9.595 33.364) matrix(48 0 0 48 3479.77 2395.57)"
-        ></path>
-        <g>
+        <g
+          id="clickable:kela:9"
+          onMouseUp={onMouseUp("kela")}
+          onMouseDown={onMouseDown("kela")}
+        >
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.073 0v-.716h.095v.355l.355-.355h.129l-.3.29L.665 0H.54L.285-.362l-.117.114V0H.073z"
+            transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1662.14 1926.21) scale(78.6768)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
+            transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1714.61 1926.21) scale(78.6768)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.073 0v-.716h.095v.632h.353V0H.073z"
+            transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1767.09 1926.21) scale(78.6768)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
+            transform="matrix(.6101 0 0 .6101 747.645 742.674) translate(1810.85 1926.21) scale(78.6768)"
+          ></path>
+        </g>
+        <g
+          id="clickable:paja:9"
+          onMouseUp={onMouseUp("paja")}
+          onMouseDown={onMouseDown("paja")}
+        >
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.074 0v-.716h.143l.169.507.034.106.038-.115.172-.498h.127V0H.666v-.599L.458 0H.373L.166-.609V0H.074z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3181.92 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3221.91 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.073 0v-.716h.095v.355l.355-.355h.129l-.3.29L.665 0H.54L.285-.362l-.117.114V0H.073z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3253.92 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3285.94 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.079 0v-.716h.317c.064 0 .112.007.146.019a.16.16 0 01.079.069c.02.032.03.068.03.107a.185.185 0 01-.049.129.247.247 0 01-.153.066.235.235 0 01.057.036.48.48 0 01.079.095L.709 0H.59L.496-.149a1.474 1.474 0 00-.069-.099.229.229 0 00-.048-.047.11.11 0 00-.043-.019.225.225 0 00-.053-.004h-.11V0H.079zm.094-.4h.204a.312.312 0 00.102-.013.114.114 0 00.037-.191C.492-.626.453-.637.4-.637H.173V-.4z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3317.95 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.045-.23l.089-.008a.199.199 0 00.03.088.155.155 0 00.072.056.273.273 0 00.11.021.252.252 0 00.095-.016.129.129 0 00.062-.044.1.1 0 00.02-.061.093.093 0 00-.019-.059.141.141 0 00-.065-.042.937.937 0 00-.127-.035.644.644 0 01-.138-.045.196.196 0 01-.077-.067.168.168 0 01-.025-.089c0-.036.011-.07.031-.101a.198.198 0 01.09-.072.343.343 0 01.131-.024c.053 0 .1.009.141.026a.205.205 0 01.128.188l-.091.007A.143.143 0 00.453-.61C.425-.633.383-.645.328-.645c-.057 0-.099.011-.125.032a.094.094 0 00-.039.076.08.08 0 00.027.063.37.37 0 00.143.051c.077.018.13.033.159.046a.223.223 0 01.092.073c.02.03.03.063.03.102a.196.196 0 01-.033.108.221.221 0 01-.094.078.41.41 0 01-.301 0 .227.227 0 01-.103-.085.239.239 0 01-.039-.129z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3352.62 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.077 0v-.716h.27c.048 0 .084.002.109.007a.219.219 0 01.088.033c.024.017.043.04.058.07a.223.223 0 01.022.097.22.22 0 01-.059.155c-.038.042-.108.063-.21.063H.172V0H.077zm.095-.375h.185c.061 0 .105-.012.13-.035.026-.022.039-.055.039-.096a.132.132 0 00-.023-.077.107.107 0 00-.06-.042.423.423 0 00-.088-.006H.172v.256z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3384.63 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M-.001 0l.274-.716h.102L.668 0H.561L.477-.217H.178L.099 0h-.1zm.206-.294h.243L.373-.492C.35-.552.333-.602.322-.641a.962.962 0 01-.038.137l-.079.21z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3413.09 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.588-.251l.095.024a.318.318 0 01-.108.178.292.292 0 01-.189.061.334.334 0 01-.188-.047.294.294 0 01-.11-.136.477.477 0 01-.038-.192c0-.075.014-.14.043-.195a.292.292 0 01.121-.127.356.356 0 01.174-.043c.071 0 .132.018.18.055A.278.278 0 01.67-.52l-.093.022a.216.216 0 00-.072-.113.191.191 0 00-.119-.036.228.228 0 00-.138.04.205.205 0 00-.078.106.436.436 0 00.004.297.195.195 0 00.083.101.226.226 0 00.121.034.203.203 0 00.135-.046.232.232 0 00.075-.136z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3445.1 2395.57)"
+          ></path>
+          <path
+            fill="#3C3C3C"
+            fillRule="nonzero"
+            d="M.079 0v-.716h.518v.085H.174v.219H.57v.084H.174v.244h.439V0H.079z"
+            transform="translate(-9.595 33.364) matrix(48 0 0 48 3479.77 2395.57)"
+          ></path>
+        </g>
+        <g
+          id="clickable:VOX:9"
+          onMouseUp={onMouseUp("VOX")}
+          onMouseDown={onMouseDown("VOX")}
+        >
           <path
             fill="#3C3C3C"
             fillRule="nonzero"
@@ -395,7 +589,11 @@ export const Map = ({ highlight }) => {
             transform="translate(35.435 38.16) matrix(48 0 0 48 3292.08 891.139)"
           ></path>
         </g>
-        <g>
+        <g
+          id="clickable:servicePoint:9"
+          onMouseUp={onMouseUp("servicePoint")}
+          onMouseDown={onMouseDown("servicePoint")}
+        >
           <path
             fill="#3C3C3C"
             fillRule="nonzero"
@@ -469,7 +667,11 @@ export const Map = ({ highlight }) => {
             transform="translate(-16.599 45.932) matrix(48 0 0 48 2425.52 1871.75)"
           ></path>
         </g>
-        <g>
+        <g
+          id="clickable:quietArea:9"
+          onMouseUp={onMouseUp("quietArea")}
+          onMouseDown={onMouseDown("quietArea")}
+        >
           <path
             fill="#3C3C3C"
             fillRule="nonzero"
@@ -525,32 +727,30 @@ export const Map = ({ highlight }) => {
             transform="translate(51.108 37.48) matrix(48 0 0 48 346.148 2358.45)"
           ></path>
         </g>
-        <g>
-          <path
-            fill="#3C3C3C"
-            fillRule="nonzero"
-            d="M0.093 -0.716H0.188V0H0.093z"
-            transform="translate(86.118 27.56) matrix(48 0 0 48 2717.63 1463.33)"
-          ></path>
-          <path
-            fill="#3C3C3C"
-            fillRule="nonzero"
-            d="M.076 0v-.716h.097l.376.562v-.562H.64V0H.543L.167-.563V0H.076z"
-            transform="translate(86.118 27.56) matrix(48 0 0 48 2730.97 1463.33)"
-          ></path>
-          <path
-            fill="#3C3C3C"
-            fillRule="nonzero"
-            d="M.082 0v-.716h.483v.085H.177v.221h.336v.085H.177V0H.082z"
-            transform="translate(86.118 27.56) matrix(48 0 0 48 2765.63 1463.33)"
-          ></path>
-          <path
-            fill="#3C3C3C"
-            fillRule="nonzero"
-            d="M.048-.349a.39.39 0 01.096-.279.326.326 0 01.247-.101.34.34 0 01.179.048.304.304 0 01.121.132c.028.056.042.12.042.192a.424.424 0 01-.044.195.297.297 0 01-.125.13.356.356 0 01-.354-.005.318.318 0 01-.121-.133.408.408 0 01-.041-.179zm.098.002c0 .086.023.154.07.204a.229.229 0 00.174.074.23.23 0 00.176-.075.303.303 0 00.069-.213c0-.059-.01-.11-.029-.153a.232.232 0 00-.214-.137.242.242 0 00-.173.069C.17-.532.146-.455.146-.347z"
-            transform="translate(86.118 27.56) matrix(48 0 0 48 2794.95 1463.33)"
-          ></path>
-        </g>
+        <path
+          fill="#3C3C3C"
+          fillRule="nonzero"
+          d="M0.093 -0.716H0.188V0H0.093z"
+          transform="translate(86.118 27.56) matrix(48 0 0 48 2717.63 1463.33)"
+        ></path>
+        <path
+          fill="#3C3C3C"
+          fillRule="nonzero"
+          d="M.076 0v-.716h.097l.376.562v-.562H.64V0H.543L.167-.563V0H.076z"
+          transform="translate(86.118 27.56) matrix(48 0 0 48 2730.97 1463.33)"
+        ></path>
+        <path
+          fill="#3C3C3C"
+          fillRule="nonzero"
+          d="M.082 0v-.716h.483v.085H.177v.221h.336v.085H.177V0H.082z"
+          transform="translate(86.118 27.56) matrix(48 0 0 48 2765.63 1463.33)"
+        ></path>
+        <path
+          fill="#3C3C3C"
+          fillRule="nonzero"
+          d="M.048-.349a.39.39 0 01.096-.279.326.326 0 01.247-.101.34.34 0 01.179.048.304.304 0 01.121.132c.028.056.042.12.042.192a.424.424 0 01-.044.195.297.297 0 01-.125.13.356.356 0 01-.354-.005.318.318 0 01-.121-.133.408.408 0 01-.041-.179zm.098.002c0 .086.023.154.07.204a.229.229 0 00.174.074.23.23 0 00.176-.075.303.303 0 00.069-.213c0-.059-.01-.11-.029-.153a.232.232 0 00-.214-.137.242.242 0 00-.173.069C.17-.532.146-.455.146-.347z"
+          transform="translate(86.118 27.56) matrix(48 0 0 48 2794.95 1463.33)"
+        ></path>
       </g>
       <g>
         <circle

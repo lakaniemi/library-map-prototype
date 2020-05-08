@@ -48,7 +48,7 @@ export const Content = ({ resetTransform }) => {
       )}
       {qrCodeVisible && <QRCodeBox highlight={highlight} />}
       <TransformComponent>
-        <Map highlight={highlight} />
+        <Map highlight={highlight} setHighlight={setHighlight} />
       </TransformComponent>
     </>
   );
