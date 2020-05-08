@@ -1,50 +1,42 @@
 import React from "react";
 
 import "./navigation-menu.css";
+
 import CloseButton from "./icons/close-24px.svg";
+import { highlightNames } from "./data";
 
 const CATEGORIES = {
-  "Children & Youth": {
-    VOX: "VOX Youth Space",
-    yesBox: "YesBox",
-    kidsPlayground: "Playground",
-    kidsLibraryInfo: "Kids library info",
-    childrenBooks: "Children's books",
-  },
-  "Arts, culture & crafts": {
-    paja: "Makerspace",
-    studio: "Music studio",
-    playingRoom: "Music playing room",
-    kohtaamo: "Kohtaamo",
-    stage: "Stage",
-  },
-  Healthcare: {
-    healthCareCenter: "Healthcare center",
-    mentalHealthCenter: "Mental health and addiction services",
-    childrenHealthCare: "Child health center",
-    mehilainenDental: "Mehiläinen dental care center",
-    husLabXRay: "HUSLab X-ray",
-  },
-  "Public services": {
-    kela: "KELA",
-    servicePoint: "Espoo city service point",
-  },
-  "Meeting rooms": {
-    meeting_kari: "Kari",
-    meeting_aalto: "Aalto",
-    meeting_meri: "Meri",
-    meeting_luoto: "Luoto",
-    meeting_kaisla: "Kaisla",
-    meeting_myrsky: "Myrsky",
-  },
-  Other: {
-    info: "Info",
-    quietArea: "Quiet area",
-    wc: "Toilets",
-    escalator: "Escalator",
-    elevators: "Elevators",
-    popup: "Popup",
-  },
+  "Children & Youth": [
+    "VOX",
+    "yesBox",
+    "kidsPlayground",
+    "kidsLibraryInfo",
+    "childrenBooks",
+  ],
+  "Arts, culture & crafts": [
+    "paja",
+    "studio",
+    "playingRoom",
+    "kohtaamo",
+    "stage",
+  ],
+  Healthcare: [
+    "healthCareCenter",
+    "mentalHealthCenter",
+    "childrenHealthCare",
+    "mehilainenDental",
+    "husLabXRay",
+  ],
+  "Public services": ["kela", "servicePoint"],
+  "Meeting rooms": [
+    "meeting_kari",
+    "meeting_aalto",
+    "meeting_meri",
+    "meeting_luoto",
+    "meeting_kaisla",
+    "meeting_myrsky",
+  ],
+  Other: ["info", "quietArea", "wc", "escalator", "elevators", "popup"],
 };
 
 const buttonClassNames = {
@@ -67,13 +59,13 @@ export const NavigationMenu = ({ onHighlightClick, onClose }) => {
           <div className="category" key={`category-${category}`}>
             <div className="title">{category}</div>
             <div className="category-buttons">
-              {Object.keys(CATEGORIES[category]).map((highlightID) => (
+              {CATEGORIES[category].map((highlightID) => (
                 <button
                   key={`highlight-${highlightID}`}
                   className={buttonClassNames[category]}
                   onClick={onHighlightClick(highlightID)}
                 >
-                  {CATEGORIES[category][highlightID]}
+                  {highlightNames[highlightID]}
                 </button>
               ))}
             </div>

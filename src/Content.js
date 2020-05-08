@@ -6,6 +6,7 @@ import { MenuButtons } from "./MenuButtons";
 import { NavigationMenu } from "./NavigationMenu";
 import { Map } from "./Map";
 import { QRCodeBox } from "./QRCodeBox";
+import { NavigationInfoPanel } from "./NavigationInfoPanel";
 
 export const Content = ({ resetTransform }) => {
   const [highlight, setHighlight] = useState(null);
@@ -36,6 +37,7 @@ export const Content = ({ resetTransform }) => {
 
   return (
     <>
+      {highlight && <NavigationInfoPanel highlight={highlight} />}
       <MenuButtons
         openNavigation={() => setNavigationVisible(true)}
         toggleQRCodeBox={() => setQRCodeVisible((oldValue) => !oldValue)}
