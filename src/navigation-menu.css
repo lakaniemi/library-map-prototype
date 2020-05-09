@@ -30,6 +30,11 @@
 .navigation-menu-content {
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+.navigation-menu-content::-webkit-scrollbar {
+  display: none;
 }
 
 .navigation-menu-content .category {
@@ -49,6 +54,7 @@
   margin-bottom: 0.8rem;
   font-size: 1rem;
   font-family: inherit;
+  text-align: left;
 }
 
 .category-buttons .children-and-youth {

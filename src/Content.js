@@ -21,7 +21,7 @@ export const Content = ({ resetTransform }) => {
     const highlightValue = new URLSearchParams(location.search).get(
       "highlight"
     );
-    if (highlightValue) {
+    if (highlightValue && highlightValue !== "null") {
       setHighlight(highlightValue);
     }
   }, [location.search]);
@@ -37,7 +37,12 @@ export const Content = ({ resetTransform }) => {
 
   return (
     <>
-      {highlight && <NavigationInfoPanel highlight={highlight} />}
+      {highlight && (
+        <NavigationInfoPanel
+          highlight={highlight}
+          resetHighlight={() => setHighlight(undefined)}
+        />
+      )}
       <MenuButtons
         openNavigation={() => setNavigationVisible(true)}
         toggleQRCodeBox={() => setQRCodeVisible((oldValue) => !oldValue)}

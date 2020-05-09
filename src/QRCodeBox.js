@@ -9,9 +9,7 @@ const BASE_URL =
     : "https://library-map-prototype.netlify.app/";
 
 export const QRCodeBox = ({ highlight }) => {
-  // TODO: make it so that the QR code will lead to the page with current
-  // highlight available, using react-router
-  const url = `${BASE_URL}?highlight=${highlight}`;
+  const url = highlight ? `${BASE_URL}?highlight=${highlight}` : BASE_URL;
 
   return (
     <div className="qr-code-box">
