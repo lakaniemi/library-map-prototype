@@ -93,341 +93,372 @@ export const Map = ({ highlight, setHighlight }) => {
       height={`${windowSize.height}px`}
       viewBox="0 0 4096 2534"
     >
-      <path fill="#fff" d="M0 0H4096V2534H0z"></path>
+      <path fill="#EBEBEB" d="M0 0H4096V2534H0z"></path>
       <path
-        id="clickable:quietArea:0"
-        onMouseUp={onMouseUp("quietArea")}
-        onMouseDown={onMouseDown("quietArea")}
-        fill="#C1FFF0"
+        fill="#fff"
         fillRule="nonzero"
-        stroke="#4F4F4F"
-        strokeOpacity="0"
-        strokeWidth="3"
-        d="M164.962 2248.82l401.172 1.08 2.1 259.71-545.91-1.68v-427.74h143.057l-.419 168.63z"
+        d="M1509 1582.5h-308.5v-47l109-662-399.847-141.205-47.688 132.288-113.134-50.402 43.964-123.154-418.302-147.722-37.465 100.955-123.953-4.771 1.814 104.312-3.99 48.063-188.756 1.202L22.5 2509.5h1287l-95-749H1509v749h2189.8l-2.63-489.66 71.59-.84-.03-64.98 40.13-1.26.83-80.54 266.31-.74V505.193l-190.64 1.457.02-77.713-48.54-2.446-2.71-35.96-50.41-1.505-1.27 108.352-290.51-2.719 2.04 92.157-33.83.6.67-93.049.36-183.566-71.02-2.493.26-162.53-1117.97-2.703-.64 219.374-66.58-.122.97-81.393-322.5-.886.87-129.903-27.62.08-41.44-40.651-296.23-3.612.09-77.06-893.87.598V323l1699.86 844.71 55.99-120.13 293.88 143.96-46.32 90.35L2312.5 1412 1509 1535.5v47z"
       ></path>
       <path
-        id="clickable:escalator:0"
-        onMouseUp={onMouseUp("escalator")}
-        onMouseDown={onMouseDown("escalator")}
-        fill="#C1FFF0"
-        d="M2340.89 1133.17l288.97 145.48 44.01-86.6-293.53-143.48-39.45 84.6z"
+        fill="#EBEBEB"
+        d="M1882.19 414.392l.29 77.457 290.1 3.715.29 90.605 33.73-.572-.86-166.061-323.55-5.144zM2832.8 919.88l.37 232.82 371.28.55v-73.49l-112.09-267.509L2832.8 919.88zM3519.39 1869.76l1.68 352.8 120.02-.55V1869.2l-121.7.56zM1974.23 1976.96l2.67 246.07 510.91 2.68-.45-246.97-513.13-1.78zM167.071 2021.5l-1.674 225.55 377.643 1.43.897-168.88-101.055-2.74.286-55.93-276.097.57zM731.229 1575.51v71.46l236.373 1.71 12.004-72.59-248.377-.58zM445.209 1223.78l-2.858 257.24 2.501 27.51 168.276.36v-286.18l-167.919 1.07zM731.415 1337.72l334.405-3.93-4.28-296.18-192.217-70.383-136.479 6.074-1.429 364.419"
       ></path>
-      <path
-        id="clickable:popup:0"
-        onMouseUp={onMouseUp("popup")}
-        onMouseDown={onMouseDown("popup")}
-        fill="#C1FFF0"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M910.667 732.874l-46.353 130.999 229.746 78.263 45.69-126.968-229.083-82.294z"
-      ></path>
-      <g fill="#FDEC5A" stroke="#4F4F4F" strokeOpacity="0">
+      <g>
+        <g fill="#C1FFF0">
+          <path
+            id="clickable:wc:0"
+            onMouseUp={onMouseUp("wc")}
+            onMouseDown={onMouseDown("wc")}
+            d="M732.849 1425.01l-.715 149.34 247.948 1.07 24.298-148.63-271.531-1.78z"
+          ></path>
+          <path
+            id="clickable:wc:1"
+            onMouseUp={onMouseUp("wc")}
+            onMouseDown={onMouseDown("wc")}
+            d="M3695.58 2018.44l72.03.29v-66.03l39.15-.85.86-78.6-110.9-.58-1.14 145.77z"
+          ></path>
+          <path
+            id="clickable:wc:2"
+            onMouseUp={onMouseUp("wc")}
+            onMouseDown={onMouseDown("wc")}
+            d="M1883.61 280.606l320.58 1.143.46 80.487-229.57.457-.92 53.277-92.15-1.144 1.6-134.22z"
+          ></path>
+        </g>
         <path
-          id="clickable:meeting_kari:0"
-          onMouseUp={onMouseUp("meeting_kari")}
-          onMouseDown={onMouseDown("meeting_kari")}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="4"
-          d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46z"
-        ></path>
-        <path
-          id="clickable:meeting_aalto:0"
-          onMouseUp={onMouseUp("meeting_aalto")}
-          onMouseDown={onMouseDown("meeting_aalto")}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="4"
-          d="M2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46z"
-        ></path>
-        <path
-          id="clickable:meeting_meri:0"
-          onMouseUp={onMouseUp("meeting_meri")}
-          onMouseDown={onMouseDown("meeting_meri")}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="4"
-          d="M2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05z"
-        ></path>
-        <path
-          id="clickable:meeting_luoto:0"
-          onMouseUp={onMouseUp("meeting_luoto")}
-          onMouseDown={onMouseDown("meeting_luoto")}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="4"
-          d="M2751.06 2304.29l2.66 204.01h199.12l-.82-202.97"
-        ></path>
-        <path
-          id="clickable:meeting_kaisla:0"
-          onMouseUp={onMouseUp("meeting_kaisla")}
-          onMouseDown={onMouseDown("meeting_kaisla")}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="4"
-          d="M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
-        ></path>
-        <path
-          id="clickable:meeting_myrsky:0"
-          onMouseUp={onMouseUp("meeting_myrsky")}
-          onMouseDown={onMouseDown("meeting_myrsky")}
+          id="clickable:quietArea:0"
+          onMouseUp={onMouseUp("quietArea")}
+          onMouseDown={onMouseDown("quietArea")}
+          fill="#C1FFF0"
           fillRule="nonzero"
+          stroke="#4F4F4F"
+          strokeOpacity="0"
           strokeWidth="3"
-          d="M590.219 774.946l-.226-155.591 201.951 71.774-45.576 122.072-156.149-38.255z"
-        ></path>
-      </g>
-      <path
-        id="clickable:servicePoint:0"
-        onMouseUp={onMouseUp("servicePoint")}
-        onMouseDown={onMouseDown("servicePoint")}
-        fill="#FFC79A"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="2.58"
-        d="M1841.82 1817.49l.08 160.1 227.86-.52 1.51-159.88-229.45.3z"
-        transform="matrix(1.95244 0 0 1 -1554.56 0)"
-      ></path>
-      <path
-        id="clickable:kela:0"
-        onMouseUp={onMouseUp("kela")}
-        onMouseDown={onMouseDown("kela")}
-        fill="#FFC79A"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="2.58"
-        d="M1632.3 1817.85l-.11 157.59 209.91 3.03-.13-160.98-209.67.36z"
-        transform="matrix(1.95244 0 0 1 -1554.56 0)"
-      ></path>
-      <path
-        id="clickable:kohtaamo:0"
-        onMouseUp={onMouseUp("kohtaamo")}
-        onMouseDown={onMouseDown("kohtaamo")}
-        fill="#FFA9A9"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M2491.18 1818.84l-1.97 179.43 215.51 1.31-1.31-178.77-212.23-1.97z"
-      ></path>
-      <path
-        id="clickable:stage:0"
-        onMouseUp={onMouseUp("stage")}
-        onMouseDown={onMouseDown("stage")}
-        fill="#FFA9A9"
-        stroke="#323232"
-        strokeDasharray="8,8,0,0"
-        strokeLinecap="round"
-        strokeMiterlimit="3"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M2810.86 2082.05l-2.06 124.61 170.57 2.06 1.15-124.84-169.66-1.83z"
-      ></path>
-      <path
-        id="clickable:paja:0"
-        onMouseUp={onMouseUp("paja")}
-        onMouseDown={onMouseDown("paja")}
-        fill="#FFA9A9"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M2954.96 2309.34l.41 198.86 742.96-.41-4.1-198.04-739.27-.41z"
-      ></path>
-      <path
-        id="clickable:studio:0"
-        onMouseUp={onMouseUp("studio")}
-        onMouseDown={onMouseDown("studio")}
-        fill="#FFA9A9"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M2488.95 2002.01l.33 90.86 214.19 1.97.33-93.16-214.85.33z"
-      ></path>
-      <path
-        id="clickable:playingRoom:0"
-        onMouseUp={onMouseUp("playingRoom")}
-        onMouseDown={onMouseDown("playingRoom")}
-        fill="#FFA9A9"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M2488.95 2095.83l-.33 126.61 215.18 1.31-.98-126.28-213.87-1.64z"
-      ></path>
-      <path
-        id="clickable:kidsPlayground:0"
-        onMouseUp={onMouseUp("kidsPlayground")}
-        onMouseDown={onMouseDown("kidsPlayground")}
-        fill="#B2FFAE"
-        stroke="#4F4F4F"
-        strokeOpacity="0"
-        strokeWidth="3"
-        d="M3582.5 1531.5H3836.5V1767.5H3582.5z"
-      ></path>
-      <path
-        id="clickable:yesBox:0"
-        onMouseUp={onMouseUp("yesBox")}
-        onMouseDown={onMouseDown("yesBox")}
-        fill="#B2FFAE"
-        d="M2981.01 1398.34l.51 152.22 166.58.52-4.62-151.2"
-      ></path>
-      <path
-        id="clickable:VOX:0"
-        onMouseUp={onMouseUp("VOX")}
-        onMouseDown={onMouseDown("VOX")}
-        fill="#B2FFAE"
-        fillRule="nonzero"
-        stroke="#4F4F4F"
-        strokeOpacity="0"
-        strokeWidth="3"
-        d="M3450.08 1076.15l-94.72-.23.04 76.89-150.79-.33-.66-71.65-111.1-268.102 268.06-110.197 88.53 3.547.64 370.072z"
-      ></path>
-      <path
-        id="clickable:elevators:1"
-        onMouseUp={onMouseUp("elevators")}
-        onMouseDown={onMouseDown("elevators")}
-        fill="#C1FFF0"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M1884.58 492.401l-2.05 93.281 289.58 1.025-1.03-92.256-286.5-2.05z"
-      ></path>
-      <path
-        id="clickable:elevators:0"
-        onMouseUp={onMouseUp("elevators")}
-        onMouseDown={onMouseDown("elevators")}
-        fill="#C1FFF0"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M1927.12 496.501l2.05 90.206 288.55-1.537-.51-86.618-290.09-2.051z"
-        transform="translate(1564.25)"
-      ></path>
-      <g
-        fill="#9ED3FF"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-      >
-        <path
-          id="clickable:childrenHealthCare:2"
-          onMouseUp={onMouseUp("childrenHealthCare")}
-          onMouseDown={onMouseDown("childrenHealthCare")}
-          d="M3909.6 1869.1l166.06.51-2.05-1150.637-158.37-1.538-5.64 1151.665z"
+          d="M164.962 2248.82l401.172 1.08 2.1 259.71-545.91-1.68v-427.74h143.057l-.419 168.63z"
         ></path>
         <path
-          id="clickable:childrenHealthCare:1"
-          onMouseUp={onMouseUp("childrenHealthCare")}
-          onMouseDown={onMouseDown("childrenHealthCare")}
-          d="M3356.18 1077.56l1.19 152.21 481.14.63.64-151.19-238.97-.64-2.56-373.511-147.08 1.282.82 370.949-95.18.27z"
+          id="clickable:escalator:0"
+          onMouseUp={onMouseUp("escalator")}
+          onMouseDown={onMouseDown("escalator")}
+          fill="#C1FFF0"
+          d="M2340.89 1133.17l288.97 145.48 44.01-86.6-293.53-143.48-39.45 84.6z"
         ></path>
         <path
-          id="clickable:childrenHealthCare:0"
-          onMouseUp={onMouseUp("childrenHealthCare")}
-          onMouseDown={onMouseDown("childrenHealthCare")}
-          d="M3356.72 1319.46v155.68l360.7-1.92-1.92-153.12-358.78-.64z"
+          id="clickable:popup:0"
+          onMouseUp={onMouseUp("popup")}
+          onMouseDown={onMouseDown("popup")}
+          fill="#C1FFF0"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M910.667 732.874l-46.353 130.999 229.746 78.263 45.69-126.968-229.083-82.294z"
         ></path>
-      </g>
-      <path
-        id="clickable:mehilainenDental:0"
-        onMouseUp={onMouseUp("mehilainenDental")}
-        onMouseDown={onMouseDown("mehilainenDental")}
-        fill="#9ED3FF"
-        fillRule="nonzero"
-        stroke="#4F4F4F"
-        strokeOpacity="0"
-        strokeWidth="3"
-        d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469z"
-      ></path>
-      <path
-        id="clickable:husLabXRay:0"
-        onMouseUp={onMouseUp("husLabXRay")}
-        onMouseDown={onMouseDown("husLabXRay")}
-        fill="#9ED3FF"
-        fillRule="nonzero"
-        stroke="#4F4F4F"
-        strokeOpacity="0"
-        strokeWidth="3"
-        d="M2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
-      ></path>
-      <path
-        id="clickable:mentalHealthCenter:0"
-        onMouseUp={onMouseUp("mentalHealthCenter")}
-        onMouseDown={onMouseDown("mentalHealthCenter")}
-        fill="#9ED3FF"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-        d="M1045.78 1790.69l75.58 666.1 181.31 3.84-87.67-690.2-169.22 20.26z"
-      ></path>
-      <g
-        fill="#9ED3FF"
-        stroke="#4F4F4F"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="1.5"
-        strokeOpacity="0"
-        strokeWidth="4"
-      >
+        <g fill="#FDEC5A" stroke="#4F4F4F" strokeOpacity="0">
+          <path
+            id="clickable:meeting_kari:0"
+            onMouseUp={onMouseUp("meeting_kari")}
+            onMouseDown={onMouseDown("meeting_kari")}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4"
+            d="M2270.15 2309.02v199.28h157.04l-4.1-201.74-152.94 2.46z"
+          ></path>
+          <path
+            id="clickable:meeting_aalto:0"
+            onMouseUp={onMouseUp("meeting_aalto")}
+            onMouseDown={onMouseDown("meeting_aalto")}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4"
+            d="M2426.37 2308.2l4.1 200.92 159.91.41-3.69-203.79-160.32 2.46z"
+          ></path>
+          <path
+            id="clickable:meeting_meri:0"
+            onMouseUp={onMouseUp("meeting_meri")}
+            onMouseDown={onMouseDown("meeting_meri")}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4"
+            d="M2588.33 2306.97l4.51 202.96 159.09-2.86-2.87-202.15-160.73 2.05z"
+          ></path>
+          <path
+            id="clickable:meeting_luoto:0"
+            onMouseUp={onMouseUp("meeting_luoto")}
+            onMouseDown={onMouseDown("meeting_luoto")}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4"
+            d="M2751.06 2304.29l2.66 204.01h199.12l-.82-202.97"
+          ></path>
+          <path
+            id="clickable:meeting_kaisla:0"
+            onMouseUp={onMouseUp("meeting_kaisla")}
+            onMouseDown={onMouseDown("meeting_kaisla")}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4"
+            d="M3916.45 507.386l-1.64 207.309 159.09 1.312V506.401l-157.45.985z"
+          ></path>
+          <path
+            id="clickable:meeting_myrsky:0"
+            onMouseUp={onMouseUp("meeting_myrsky")}
+            onMouseDown={onMouseDown("meeting_myrsky")}
+            fillRule="nonzero"
+            strokeWidth="3"
+            d="M590.219 774.946l-.226-155.591 201.951 71.774-45.576 122.072-156.149-38.255z"
+          ></path>
+        </g>
         <path
-          id="clickable:healthCareCenter:2"
-          onMouseUp={onMouseUp("healthCareCenter")}
-          onMouseDown={onMouseDown("healthCareCenter")}
-          d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41z"
+          id="clickable:servicePoint:0"
+          onMouseUp={onMouseUp("servicePoint")}
+          onMouseDown={onMouseDown("servicePoint")}
+          fill="#FFC79A"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="2.58"
+          d="M1841.82 1817.49l.08 160.1 227.86-.52 1.51-159.88-229.45.3z"
+          transform="matrix(1.95244 0 0 1 -1554.56 0)"
         ></path>
         <path
-          id="clickable:healthCareCenter:1"
-          onMouseUp={onMouseUp("healthCareCenter")}
-          onMouseDown={onMouseDown("healthCareCenter")}
-          d="M167.951 1226.36l1.64 253.8 271.847-3.28.41-252.17-273.897 1.65"
+          id="clickable:kela:0"
+          onMouseUp={onMouseUp("kela")}
+          onMouseDown={onMouseDown("kela")}
+          fill="#FFC79A"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="2.58"
+          d="M1632.3 1817.85l-.11 157.59 209.91 3.03-.13-160.98-209.67.36z"
+          transform="matrix(1.95244 0 0 1 -1554.56 0)"
         ></path>
         <path
-          id="clickable:healthCareCenter:0"
-          onMouseUp={onMouseUp("healthCareCenter")}
-          onMouseDown={onMouseDown("healthCareCenter")}
-          d="M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"
+          id="clickable:kohtaamo:0"
+          onMouseUp={onMouseUp("kohtaamo")}
+          onMouseDown={onMouseDown("kohtaamo")}
+          fill="#FFA9A9"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M2490.03 1817.7l-2.44 145.57 1.62 35 215.51 1.31-1.31-178.77-213.38-3.11z"
         ></path>
+        <path
+          id="clickable:stage:0"
+          onMouseUp={onMouseUp("stage")}
+          onMouseDown={onMouseDown("stage")}
+          fill="#FFA9A9"
+          stroke="#323232"
+          strokeDasharray="8,8,0,0"
+          strokeLinecap="round"
+          strokeMiterlimit="3"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M2810.86 2082.05l-2.06 124.61 170.57 2.06 1.15-124.84-169.66-1.83z"
+        ></path>
+        <path
+          id="clickable:paja:0"
+          onMouseUp={onMouseUp("paja")}
+          onMouseDown={onMouseDown("paja")}
+          fill="#FFA9A9"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M2954.96 2309.34l.41 198.86 742.96-.41-4.1-198.04-739.27-.41z"
+        ></path>
+        <path
+          id="clickable:studio:0"
+          onMouseUp={onMouseUp("studio")}
+          onMouseDown={onMouseDown("studio")}
+          fill="#FFA9A9"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M2488.95 2002.01l.33 90.86 214.19 1.97.33-93.16-214.85.33z"
+        ></path>
+        <path
+          id="clickable:playingRoom:0"
+          onMouseUp={onMouseUp("playingRoom")}
+          onMouseDown={onMouseDown("playingRoom")}
+          fill="#FFA9A9"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M2488.95 2095.83l-.33 126.61 215.18 1.31-.98-126.28-213.87-1.64z"
+        ></path>
+        <path
+          id="clickable:kidsPlayground:0"
+          onMouseUp={onMouseUp("kidsPlayground")}
+          onMouseDown={onMouseDown("kidsPlayground")}
+          fill="#B2FFAE"
+          stroke="#4F4F4F"
+          strokeOpacity="0"
+          strokeWidth="3"
+          d="M3582.5 1531.5H3836.5V1767.5H3582.5z"
+        ></path>
+        <path
+          id="clickable:yesBox:0"
+          onMouseUp={onMouseUp("yesBox")}
+          onMouseDown={onMouseDown("yesBox")}
+          fill="#B2FFAE"
+          d="M2981.01 1398.34l.51 152.22 166.58.52-4.62-151.2"
+        ></path>
+        <path
+          id="clickable:VOX:0"
+          onMouseUp={onMouseUp("VOX")}
+          onMouseDown={onMouseDown("VOX")}
+          fill="#B2FFAE"
+          fillRule="nonzero"
+          stroke="#4F4F4F"
+          strokeOpacity="0"
+          strokeWidth="3"
+          d="M3450.08 1076.15l-94.72-.23.04 76.89-150.79-.33-.66-71.65-111.1-268.102 268.06-110.197 88.53 3.547.64 370.072z"
+        ></path>
+        <path
+          id="clickable:elevators:1"
+          onMouseUp={onMouseUp("elevators")}
+          onMouseDown={onMouseDown("elevators")}
+          fill="#C1FFF0"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M1884.58 492.401l-2.05 93.281 289.58 1.025-1.03-92.256-286.5-2.05z"
+        ></path>
+        <path
+          id="clickable:elevators:0"
+          onMouseUp={onMouseUp("elevators")}
+          onMouseDown={onMouseDown("elevators")}
+          fill="#C1FFF0"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M1927.12 496.501l2.05 90.206 288.55-1.537-.51-86.618-290.09-2.051z"
+          transform="translate(1564.25)"
+        ></path>
+        <g
+          fill="#9ED3FF"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+        >
+          <path
+            id="clickable:childrenHealthCare:2"
+            onMouseUp={onMouseUp("childrenHealthCare")}
+            onMouseDown={onMouseDown("childrenHealthCare")}
+            d="M3909.6 1869.1l166.06.51-2.05-1150.637-158.37-1.538-5.64 1151.665z"
+          ></path>
+          <path
+            id="clickable:childrenHealthCare:1"
+            onMouseUp={onMouseUp("childrenHealthCare")}
+            onMouseDown={onMouseDown("childrenHealthCare")}
+            d="M3356.18 1077.56l1.19 152.21 481.14.63.64-151.19-238.97-.64-2.56-373.511-147.08 1.282.82 370.949-95.18.27z"
+          ></path>
+          <path
+            id="clickable:childrenHealthCare:0"
+            onMouseUp={onMouseUp("childrenHealthCare")}
+            onMouseDown={onMouseDown("childrenHealthCare")}
+            d="M3356.72 1319.46v155.68l360.7-1.92-1.92-153.12-358.78-.64z"
+          ></path>
+        </g>
+        <path
+          id="clickable:mehilainenDental:0"
+          onMouseUp={onMouseUp("mehilainenDental")}
+          onMouseDown={onMouseDown("mehilainenDental")}
+          fill="#9ED3FF"
+          fillRule="nonzero"
+          stroke="#4F4F4F"
+          strokeOpacity="0"
+          strokeWidth="3"
+          d="M2890.58 145.063l497.76.64-1.28 438.431-497.12 206.398.64-645.469z"
+        ></path>
+        <path
+          id="clickable:husLabXRay:0"
+          onMouseUp={onMouseUp("husLabXRay")}
+          onMouseDown={onMouseDown("husLabXRay")}
+          fill="#9ED3FF"
+          fillRule="nonzero"
+          stroke="#4F4F4F"
+          strokeOpacity="0"
+          strokeWidth="3"
+          d="M2272.64 144.422h615.33l-.64 647.656-297.78 122.125-314.99-162.829-1.92-606.952z"
+        ></path>
+        <path
+          id="clickable:mentalHealthCenter:0"
+          onMouseUp={onMouseUp("mentalHealthCenter")}
+          onMouseDown={onMouseDown("mentalHealthCenter")}
+          fill="#9ED3FF"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+          d="M1045.78 1790.69l75.58 666.1 181.31 3.84-87.67-690.2-169.22 20.26z"
+        ></path>
+        <g
+          fill="#9ED3FF"
+          stroke="#4F4F4F"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="1.5"
+          strokeOpacity="0"
+          strokeWidth="4"
+        >
+          <path
+            id="clickable:healthCareCenter:2"
+            onMouseUp={onMouseUp("healthCareCenter")}
+            onMouseDown={onMouseDown("healthCareCenter")}
+            d="M168.449 844.56l.82 295.63 445.289.82-2.05-296.86-444.059.41z"
+          ></path>
+          <path
+            id="clickable:healthCareCenter:1"
+            onMouseUp={onMouseUp("healthCareCenter")}
+            onMouseDown={onMouseDown("healthCareCenter")}
+            d="M167.951 1226.36l1.64 253.8 271.701-.06.556-255.39-273.897 1.65"
+          ></path>
+          <path
+            id="clickable:healthCareCenter:0"
+            onMouseUp={onMouseUp("healthCareCenter")}
+            onMouseDown={onMouseDown("healthCareCenter")}
+            d="M214.805 639.752l1.312 103.654 372.96 1.394V619.742l-212.886-73.477-36.082 97.423-125.304-3.936z"
+          ></path>
+        </g>
       </g>
       <g fill="none" stroke="#3C3C3C" strokeWidth="4">
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
-          <path d="M731.541 972.516v366.624l334.669-3.36-3.36-297.68-193.405-70.63-137.904 5.046zM731.541 1423.23v223.67l237.127 1.68 37.002-223.67-274.129-1.68zM1140.21 817.794l-45.41 126.132-232.082-79.043 45.407-129.495M862.718 864.883l-116.041-50.452 43.725-117.723"></path>
-          <path d="M746.677 814.431l-95.861-25.227-62.225-13.454V622.71M168.188 844.43l-.862 297.07h446.89l-.861-298.792-445.167 1.722zM166.465 1225.02l2.584 257.46 272.955-2.59 1.723 28.42 170.489 1.72-.861-287.6-446.89 2.59zM588.591 745.479l-373.35-1.682-3.363 48.297-185.353 2.237M215.241 743.797l-1.681-104.269 154.721 5.045.697 99.916M337.768 643.578l37.24-100.457 97.537 34.645M471.396 576.148l1.091 168.808M279.375 844l-2.077 297.5M390.957 842.626v295.514M501.862 841.248l2.066 296.202M614.833 992.795l-444.307-.689M306.214 1225.55l1.076 254.01M166.292 1338.57l277.691 2.15M443.983 1221.25l-1.076 255.08"></path>
+          <path d="M731.541 972.516v366.624l334.669-3.36-3.36-297.68-193.405-70.63-137.904 5.046zM731.541 1423.23v223.67l237.127 1.68 37.002-223.67-274.129-1.68zM1140.21 817.794l-45.41 126.132-232.082-79.043 45.407-129.495M862.718 864.883l-116.041-50.452 45.869-122.725"></path>
+          <path d="M746.677 814.431l-95.861-25.227-62.225-13.454V622.71M168.188 844.43l-.862 297.07h446.89l-.861-298.792-445.167 1.722zM166.465 1225.02l2.584 257.46 272.955-2.59 1.723 28.42 170.489 1.72-.861-287.6-446.89 2.59zM588.591 745.479l-373.35-1.682-3.363 48.297-188.925 2.594M215.241 743.797l-1.681-104.269 154.721 5.045.697 99.916M337.768 643.578l37.24-100.457 97.537 34.645M471.396 576.148l1.091 168.808M279.375 844l-2.077 297.5M390.957 842.626v295.514M501.862 841.248l2.066 296.202M614.833 992.795l-444.307-.689M306.214 1225.55l1.076 254.01M166.292 1338.57l276.059 2.1M443.755 1223.99l-1.58 256.15"></path>
         </g>
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
           <path d="M567.828 2504.75l-1.346-255.62-400.93-1.35 1.345-226.03 277.154-1.34-1.346 56.5 102.251 1.35-1.362 170.47M165.552 2079.61H22.939M57.869 2079.61l.441-76.98c47.272 7.83 70.585 33.18 69.656 76.27l-70.097.71M1216.36 1769.99l-171.35 19.81 19.8 168.76 171.35-19.8-19.8-168.77zM1064.81 1958.56l43.05 375.43 12.06 124.85 184.26 2.58-66.3-522.66M1288.46 2337.46l-180.6-3.47M1275.77 2227.21l-176.52 20.67M1261.13 2131.64l-171.35 18.94M1249.08 2030.03l-171.35 18.08"></path>
@@ -440,7 +471,7 @@ export const Map = ({ highlight, setHighlight }) => {
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
           <path d="M2955.31 2309.19h740.51l3.44 200.63M3908.28 1866.43l6.73-1360.201 161.45-1.346M3913.98 715.368l160.91 1.329M3913.1 834.848l162.23-.441M3912.22 953.881l164 1.763M3911.77 1075.56l163.12-.88M3913.1 1197.24l162.23.88M3911.33 1315.83l162.68 1.32M3910.89 1437.51l164.88 1.32M3910.01 1559.18l165.32-.44M3910.89 1661.46h164M3909.13 1764.63l165.76 1.32"></path>
           <path d="M3694.95 2313.5v-441.73l377.15-.86M3517.58 1870.05l2.58 353.04h120.55l.86-353.9-123.99.86zM3355.43 1319.6l.86 155.85 360.78-2.58-.86-154.13-360.78.86zM3595.66 1319.03l2.63 154.69M3475.12 1320.46l-.86 152.41M3356.29 1230.91l-.86-154.12 483.91.86-1.72 152.4-481.33.86zM3474.26 1077l3.44 153.7M3594.8 1076.79l4.31 153.26M3715.35 1076.79l5.17 152.4M3450.15 1074.2V705.67l337.53-4.305-.86-115.382M3598.26 703.781l.85 371.279M3598.54 827.947l-146.67-3.451M3600.83 953.654l-149.82-3.444"></path>
-          <path d="M3786.91 586.7l-328.07.861.86-278.121-70.6-.861V144.978l-1118.6-1.601-415.02 6.888-41.34-40.469-297.06-2.583.86-72.329"></path>
+          <path d="M3786.91 586.7l-328.07.861.86-278.121-70.6-.861V144.978l-1118.6-1.601-415.02 6.888-41.34-40.469-297.06-2.583 1.57-76.974"></path>
           <path d="M3915.18 506.938l-31.41.551.55-79.355-49.04-.551-2.21-38.025h-50.15l-1.65 195.081 52.9-1.653v-56.761"></path>
           <path d="M3782.17 478.256l48.15.026 2.2-14.88v24.799M3459.13 494.893l322.88 2.672"></path>
           <path
@@ -451,7 +482,7 @@ export const Map = ({ highlight, setHighlight }) => {
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
           <path d="M3388.84 305.996l-.86 278.122-797.34 331.507-317.73-162.74-1.73-609.628M2888.56 142.396l-.26 649.47M3451.69 705.527l-91.27-4.306-527.83 218.709v232.48l524.39.87"></path>
           <path d="M3092.24 812.346l111.47 267.744.86 70.6M1882.23 149.628v435.695l324.62 1.722V418.278l-324.62-3.444M2206.85 494.912l-324.62-3.444"></path>
-          <path d="M2273.15 363.17l-298.78-.861v46.497M2979.59 1398.15l1.38 152.92 166.7-.69-2.76-150.85-165.32-1.38z"></path>
+          <path d="M2273.15 363.17l-298.78-.861v52.928M2979.59 1398.15l1.38 152.92 166.7-.69-2.76-150.85-165.32-1.38z"></path>
         </g>
         <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
           <path d="M1954.84 491.569v91.615M2026.59 493.491l.64 90.974M2097.7 493.491l1.93 90.974M2172.02 494.131v89.053M3491.2 497.738l1.92 88.412M3563.59 497.738l1.29 87.771M3636.63 497.738v83.927M3707.74 497.738l1.29 88.412"></path>
@@ -461,6 +492,15 @@ export const Map = ({ highlight, setHighlight }) => {
           strokeMiterlimit="5"
           d="M2629.55 1278.59l-288.96-143.76"
         ></path>
+        <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
+          <path d="M732.37 1494.13l124.902-.57 1.144-67.74M794.677 1493.85l.573-68.03M980.175 1575.88H732.084M857.558 1575.88l.572-31.73M857.844 1493.85l.572 17.72M858.14 1503.03l31.144-1.18.858-75.46"></path>
+        </g>
+        <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
+          <path d="M3696 2018.85l71.81 1.07-1.07-67.16 40.37.35.36-80.74M3694.93 1950.97l71.81 1.79M3737.08 1952.02v-78.58M3737.08 1911.67l-40.73-1.07"></path>
+        </g>
+        <g strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5">
+          <path d="M1974.09 361.099l-.72-80.744 231.16.714-.36 82.173M2133.07 280.848l-1.79 80.608M1973.37 281.784l-90.03-1.072"></path>
+        </g>
       </g>
       <path
         fill="none"
